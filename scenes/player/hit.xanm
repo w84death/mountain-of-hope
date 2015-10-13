@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="Animation" subresource_count="1" version="1.1" version_name="Godot Engine v1.1.stable.d3b42e41b0">
+	<main_resource>
+		<string name="resource/name"> "hit" </string>
+		<real name="length"> 0.4 </real>
+		<bool name="loop"> False </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> ".:visibility/opacity" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> False </bool>
+			<string> "times" </string>
+			<real_array  len="9"> 				0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="9"> 				1, 1, 1, 1, 1, 1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="9" shared="false">
+				<real> 1 </real>
+				<real> 0.2 </real>
+				<real> 1 </real>
+				<real> 0.2 </real>
+				<real> 1 </real>
+				<real> 0.2 </real>
+				<real> 1 </real>
+				<real> 0.2 </real>
+				<real> 1 </real>
+			</array>
+		</dictionary>
+
+	</main_resource>
+</resource_file>
