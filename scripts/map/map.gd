@@ -8,10 +8,10 @@ var start_cell
 var cell_template = preload("res://scripts/map/map_cell.gd")
 
 var tilesets = [
-    preload("res://scenes/levels/main_tileset1.res"),
-    preload("res://scenes/levels/main_tileset2.res"),
-    preload("res://scenes/levels/main_tileset3.res"),
-    preload("res://scenes/levels/main_tileset4.res"),
+    #preload("res://scenes/levels/main_tileset1.res"),
+    #preload("res://scenes/levels/main_tileset2.res"),
+    #preload("res://scenes/levels/main_tileset3.res"),
+    #preload("res://scenes/levels/main_tileset4.res"),
 ]
 
 func _init_bag(bag):

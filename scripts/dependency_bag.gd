@@ -4,7 +4,7 @@ var root
 var game_state = preload("res://scripts/game_state.gd").new()
 var action_controller = preload("res://scripts/controllers/action_controller.gd").new()
 
-var hud = preload("res://scripts/hud/hud.gd").new()
+#var hud = preload("res://scripts/hud/hud.gd").new()
 var timers = preload("res://scripts/timers.gd").new()
 var input = preload("res://scripts/input/input.gd").new()
 var players = preload("res://scripts/players.gd").new()
@@ -19,7 +19,7 @@ var stream_player
 
 func _init(root_node):
     self.root = root_node
-    self.hud._init_bag(self)
+    #self.hud._init_bag(self)
     self.timers._init_bag(self)
     self.game_state._init_bag(self)
     self.input._init_bag(self)

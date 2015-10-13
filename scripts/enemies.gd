@@ -2,12 +2,12 @@
 var bag
 
 var enemy_templates = {
-    'shia' : preload("res://scripts/enemies/shia.gd"),
-    'retarded_rat' : preload("res://scripts/enemies/retarded_rat.gd"),
-    'fat_rat' : preload("res://scripts/enemies/fat_rat.gd"),
-    'jumping_rat' : preload("res://scripts/enemies/jumping_rat.gd"),
-    'spider' : preload("res://scripts/enemies/spider.gd"),
-    'shia_prime' : preload("res://scripts/enemies/shia_prime.gd"),
+    #'shia' : preload("res://scripts/enemies/shia.gd"),
+    #'retarded_rat' : preload("res://scripts/enemies/retarded_rat.gd"),
+    #'fat_rat' : preload("res://scripts/enemies/fat_rat.gd"),
+    #'jumping_rat' : preload("res://scripts/enemies/jumping_rat.gd"),
+    #'spider' : preload("res://scripts/enemies/spider.gd"),
+    #'shia_prime' : preload("res://scripts/enemies/shia_prime.gd"),
 }
 
 var enemy_difficulties = [

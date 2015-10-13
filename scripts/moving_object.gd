@@ -14,7 +14,7 @@ var hat = false
 var stun_duration = 0.15
 var stun_level = 0
 
-var tombstone_template = preload("res://scenes/particles/thumbstone.xscn")
+var tombstone_template #= preload("res://scenes/particles/thumbstone.xscn")
 
 func _init(bag).(bag):
     self.bag = bag
