@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="15" version="1.1" version_name="Godot Engine v1.1.stable.d3b42e41b0">
-	<ext_resource path="res://scenes/player/assets/shadow.png" type="Texture"></ext_resource>
-	<ext_resource path="res://scenes/player/assets/body.png" type="Texture"></ext_resource>
-	<ext_resource path="res://scenes/player/assets/head.png" type="Texture"></ext_resource>
-	<ext_resource path="res://scenes/player/assets/hats.png" type="Texture"></ext_resource>
-	<ext_resource path="res://scenes/player/assets/footer.png" type="Texture"></ext_resource>
-	<ext_resource path="res://scenes/player/assets/attack.png" type="Texture"></ext_resource>
-	<ext_resource path="res://scenes/player/assets/attack_blast.png" type="Texture"></ext_resource>
-	<resource type="CircleShape2D" path="local://0">
+<resource_file type="PackedScene" subresource_count="15" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
+	<ext_resource path="res://scenes/player/assets/player.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://scenes/player/assets/shadow.png" type="Texture" index="0"></ext_resource>
+	<ext_resource path="res://scenes/player/assets/head.png" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://scenes/player/assets/hats.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://scenes/player/assets/footer.png" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://scenes/player/assets/attack.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://scenes/player/assets/attack_blast.png" type="Texture" index="6"></ext_resource>
+	<resource type="CircleShape2D" path="local://7">
 		<real name="custom_solver_bias"> 0 </real>
 		<real name="radius"> 10 </real>
 
@@ -296,21 +296,10 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="63">
+			<string_array  len="48">
 				<string> "player" </string>
 				<string> "KinematicBody2D" </string>
-				<string> "_import_path" </string>
-				<string> "visibility/visible" </string>
-				<string> "visibility/opacity" </string>
-				<string> "visibility/self_opacity" </string>
-				<string> "visibility/light_mask" </string>
-				<string> "transform/pos" </string>
-				<string> "transform/rot" </string>
-				<string> "transform/scale" </string>
-				<string> "z/z" </string>
-				<string> "z/relative" </string>
 				<string> "input/pickable" </string>
-				<string> "shape_count" </string>
 				<string> "shapes/0/shape" </string>
 				<string> "shapes/0/transform" </string>
 				<string> "shapes/0/trigger" </string>
@@ -320,29 +309,25 @@
 				<string> "__meta__" </string>
 				<string> "shadow" </string>
 				<string> "Sprite" </string>
+				<string> "transform/pos" </string>
 				<string> "texture" </string>
-				<string> "centered" </string>
-				<string> "offset" </string>
-				<string> "flip_h" </string>
-				<string> "flip_v" </string>
-				<string> "vframes" </string>
-				<string> "hframes" </string>
-				<string> "frame" </string>
-				<string> "modulate" </string>
-				<string> "region" </string>
-				<string> "region_rect" </string>
 				<string> "body" </string>
 				<string> "head" </string>
+				<string> "visibility/visible" </string>
+				<string> "hframes" </string>
 				<string> "hat" </string>
+				<string> "vframes" </string>
 				<string> "footer" </string>
 				<string> "collision" </string>
 				<string> "CollisionShape2D" </string>
 				<string> "shape" </string>
 				<string> "trigger" </string>
+				<string> "_update_shape_index" </string>
 				<string> "attack_cone" </string>
 				<string> "Node2D" </string>
 				<string> "attack_front" </string>
 				<string> "attack_blast" </string>
+				<string> "frame" </string>
 				<string> "body_animations" </string>
 				<string> "AnimationPlayer" </string>
 				<string> "playback/process_mode" </string>
@@ -364,30 +349,23 @@
 			<string> "node_count" </string>
 			<int> 13 </int>
 			<string> "nodes" </string>
-			<int_array  len="529"> 				-1, -1, 1, 0, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 1, 12, 8, 13, 3, 14, 9, 15, 10, 16, 8, 17, 3, 18, 3, 19, 11, 20, 12, 0, 0, 0, 22, 21, -1, 21, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 13, 8, 5, 9, 6, 10, 7, 11, 1, 23, 14, 24, 1, 25, 4, 26, 8, 27, 8, 28, 3, 29, 3, 30, 7, 31, 15, 32, 8, 33, 16, 0, 0, 0, 22, 34, -1, 21, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 17, 8, 5, 9, 6, 10, 7, 11, 1, 23, 18, 24, 1, 25, 4, 26, 8, 27, 8, 28, 3, 29, 19, 30, 7, 31, 15, 32, 8, 33, 16, 0, 0, 0, 22, 35, -1, 21, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 20, 8, 5, 9, 6, 10, 7, 11, 1, 23, 21, 24, 1, 25, 4, 26, 8, 27, 8, 28, 3, 29, 22, 30, 7, 31, 15, 32, 8, 33, 16, 0, 3, 0, 22, 36, -1, 21, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 23, 8, 5, 9, 6, 10, 7, 11, 1, 23, 24, 24, 1, 25, 4, 26, 8, 27, 8, 28, 22, 29, 22, 30, 7, 31, 15, 32, 8, 33, 16, 0, 0, 0, 22, 37, -1, 21, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 25, 8, 5, 9, 6, 10, 7, 11, 1, 23, 26, 24, 1, 25, 4, 26, 8, 27, 8, 28, 3, 29, 27, 30, 7, 31, 15, 32, 8, 33, 16, 0, 0, 0, 39, 38, -1, 12, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 28, 8, 5, 9, 6, 10, 7, 11, 1, 40, 9, 41, 8, 0, 0, 0, 43, 42, -1, 11, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 29, 8, 5, 9, 6, 10, 7, 11, 1, 20, 30, 0, 7, 0, 22, 44, -1, 21, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 31, 8, 5, 9, 6, 10, 7, 11, 1, 23, 32, 24, 1, 25, 4, 26, 8, 27, 8, 28, 33, 29, 3, 30, 7, 31, 15, 32, 8, 33, 16, 0, 7, 0, 22, 45, -1, 21, 2, 0, 3, 8, 4, 2, 5, 2, 6, 3, 7, 34, 8, 5, 9, 6, 10, 7, 11, 1, 23, 35, 24, 1, 25, 4, 26, 8, 27, 8, 28, 22, 29, 22, 30, 27, 31, 15, 32, 8, 33, 16, 0, 0, 0, 47, 46, -1, 12, 2, 0, 48, 3, 49, 5, 50, 36, 51, 37, 52, 38, 53, 39, 54, 40, 55, 1, 56, 2, 57, 41, 58, 42, 0, 0, 0, 47, 59, -1, 9, 2, 0, 48, 3, 49, 5, 50, 36, 60, 43, 55, 1, 56, 44, 57, 41, 58, 42, 0, 0, 0, 47, 61, -1, 9, 2, 0, 48, 3, 49, 5, 50, 36, 62, 45, 55, 1, 56, 2, 57, 41, 58, 46, 0 </int_array>
+			<int_array  len="225"> 				-1, -1, 1, 0, -1, 8, 2, 0, 3, 1, 4, 2, 5, 0, 6, 3, 7, 3, 8, 4, 9, 5, 0, 0, 0, 11, 10, -1, 2, 12, 6, 13, 7, 0, 0, 0, 11, 14, -1, 2, 12, 8, 13, 9, 0, 0, 0, 11, 15, -1, 4, 16, 0, 12, 10, 13, 11, 17, 12, 0, 3, 0, 11, 18, -1, 4, 12, 13, 13, 14, 19, 12, 17, 12, 0, 0, 0, 11, 20, -1, 4, 16, 0, 12, 15, 13, 16, 17, 17, 0, 0, 0, 22, 21, -1, 4, 12, 18, 23, 1, 24, 0, 25, 19, 0, 0, 0, 27, 26, -1, 3, 16, 0, 12, 20, 9, 21, 0, 7, 0, 11, 28, -1, 3, 12, 22, 13, 23, 19, 24, 0, 7, 0, 11, 29, -1, 6, 16, 0, 12, 25, 13, 26, 19, 12, 17, 12, 30, 17, 0, 0, 0, 32, 31, -1, 11, 33, 3, 34, 27, 35, 28, 36, 29, 37, 30, 38, 31, 39, 32, 40, 33, 41, 34, 42, 35, 43, 36, 0, 0, 0, 32, 44, -1, 8, 33, 3, 34, 27, 35, 28, 45, 37, 40, 33, 41, 38, 42, 35, 43, 36, 0, 0, 0, 32, 46, -1, 8, 33, 3, 34, 27, 35, 28, 47, 39, 40, 33, 41, 34, 42, 35, 43, 40, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="47" shared="false">
-				<node_path> "" </node_path>
-				<bool> True </bool>
-				<real> 1 </real>
-				<int> 1 </int>
-				<vector2> 0, 0 </vector2>
-				<real> 0 </real>
-				<vector2> 1, 1 </vector2>
-				<int> 0 </int>
+			<array  len="41" shared="false">
 				<bool> False </bool>
-				<resource  resource_type="Shape2D" path="local://0">  </resource>
+				<resource  resource_type="Shape2D" path="local://7">  </resource>
 				<matrix32> 1, -0, 0, 1, 0, 7.4498 </matrix32>
+				<int> 1 </int>
 				<real> 0.08 </real>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -79.6562, -23.9985 </vector2>
+							<vector2> -130.348, -86.4537 </vector2>
 							<string> "snap_grid" </string>
 							<bool> False </bool>
 							<string> "snap_offset" </string>
@@ -407,7 +385,7 @@
 							<string> "snap_step" </string>
 							<vector2> 10, 10 </vector2>
 							<string> "zoom" </string>
-							<real> 7.022682 </real>
+							<real> 3.794777 </real>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
@@ -501,14 +479,10 @@
 							<string> "znear" </string>
 							<real> 0.1 </real>
 						</dictionary>
-						<string> "Script" </string>
+						<string> "Anim" </string>
 						<dictionary  shared="false">
-							<string> "current" </string>
-							<int> 0 </int>
-							<string> "sources" </string>
-							<array  len="1" shared="false">
-								<string> "res://scripts/enemies/shia_prime.gd" </string>
-							</array>
+							<string> "visible" </string>
+							<bool> False </bool>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_run_settings__" </string>
@@ -520,36 +494,37 @@
 					</dictionary>
 				</dictionary>
 				<vector2> 0, 16 </vector2>
-				<resource  resource_type="Texture" path="res://scenes/player/assets/shadow.png">  </resource>
-				<color> 1, 1, 1, 1 </color>
-				<rect2> 0, 0, 0, 0 </rect2>
-				<vector2> 0, -2 </vector2>
-				<resource  resource_type="Texture" path="res://scenes/player/assets/body.png">  </resource>
-				<int> 5 </int>
+				<resource  external="0">  </resource>
+				<vector2> 0.263519, -17.2842 </vector2>
+				<resource  external="1">  </resource>
 				<vector2> 0, -7 </vector2>
-				<resource  resource_type="Texture" path="res://scenes/player/assets/head.png">  </resource>
+				<resource  external="2">  </resource>
 				<int> 2 </int>
 				<vector2> 0, -5 </vector2>
-				<resource  resource_type="Texture" path="res://scenes/player/assets/hats.png">  </resource>
+				<resource  external="3">  </resource>
 				<vector2> 0, 9 </vector2>
-				<resource  resource_type="Texture" path="res://scenes/player/assets/footer.png">  </resource>
+				<resource  external="4">  </resource>
 				<int> 3 </int>
 				<vector2> 0, 7.4498 </vector2>
+				<int> -1 </int>
 				<vector2> 0, 4 </vector2>
 				<dictionary  shared="false">
 					<string> "_edit_lock_" </string>
 					<bool> True </bool>
 				</dictionary>
 				<vector2> 0, -26 </vector2>
-				<resource  resource_type="Texture" path="res://scenes/player/assets/attack.png">  </resource>
+				<resource  external="5">  </resource>
 				<int> 6 </int>
 				<vector2> 0, -36 </vector2>
-				<resource  resource_type="Texture" path="res://scenes/player/assets/attack_blast.png">  </resource>
+				<resource  external="6">  </resource>
+				<real> 0 </real>
 				<node_path> ".." </node_path>
 				<resource  resource_type="Animation" path="local://1">  </resource>
 				<resource  resource_type="Animation" path="local://2">  </resource>
 				<resource  resource_type="Animation" path="local://3">  </resource>
 				<resource  resource_type="Animation" path="local://4">  </resource>
+				<bool> True </bool>
+				<real> 1 </real>
 				<array  len="0" shared="false">
 				</array>
 				<string> "" </string>
