@@ -1,5 +1,5 @@
-# Rat is Fat
+# Mountain of Hope
 
-Game made on Slavic Game Jam 2015
+Game made on Theater Game Jam (PGA 2015)
 
-## More info when the jam begin (14:00GMT)
+## More info maybe later :D
