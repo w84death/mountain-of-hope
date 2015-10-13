@@ -2,6 +2,7 @@ extends "res://scripts/object.gd"
 
 var velocity
 var movement_vector = [0, 0]
+var controller_vector = [0, 0]
 
 var AXIS_THRESHOLD = 0.15
 
@@ -15,6 +16,11 @@ var stun_duration = 0.15
 var stun_level = 0
 
 var tombstone_template #= preload("res://scenes/particles/thumbstone.xscn")
+
+var FLOOR_FRICTION = 25
+var MOVEMENT_SPEED_CAP = 10
+var GRAVITY = 30
+var COLLIDING_FALL = 0.1
 
 func _init(bag).(bag):
     self.bag = bag
@@ -31,15 +37,60 @@ func process(delta):
     self.modify_position(delta)
 
 func modify_position(delta):
-    var x = self.apply_axis_threshold(self.movement_vector[0])
-    var y = self.apply_axis_threshold(self.movement_vector[1])
-    var motion = Vector2(x, y) * self.velocity * delta
-    self.avatar.move(motion)
+    var x = self.apply_axis_threshold(self.controller_vector[0])
+    var y = self.apply_axis_threshold(self.controller_vector[1])
+
+    var current_motion = Vector2(self.movement_vector[0], self.movement_vector[1])
+    var motion_delta = Vector2(x, y) * self.velocity * delta
+
+    motion_delta.y = motion_delta.y + self.GRAVITY * delta
+
+    current_motion = current_motion + motion_delta
+
+    if abs(current_motion.x) > self.MOVEMENT_SPEED_CAP:
+        if current_motion.x < 0:
+            current_motion.x = -self.MOVEMENT_SPEED_CAP
+        else:
+            current_motion.x = self.MOVEMENT_SPEED_CAP
+
+    if abs(current_motion.y) > self.MOVEMENT_SPEED_CAP:
+        if current_motion.y < 0:
+            current_motion.y = -self.MOVEMENT_SPEED_CAP
+        else:
+            current_motion.y = self.MOVEMENT_SPEED_CAP
+
+    if current_motion == Vector2(0, 0):
+        return
+
+    self.avatar.move(current_motion)
     if (self.avatar.is_colliding()):
+        if abs(current_motion.x) < self.FLOOR_FRICTION * delta:
+            current_motion.x = 0
+        else:
+            if current_motion.x > 0:
+                current_motion.x = current_motion.x - self.FLOOR_FRICTION * delta
+            else:
+                current_motion.x = current_motion.x + self.FLOOR_FRICTION * delta
+
         var n = self.avatar.get_collision_normal()
-        motion = n.slide(motion)
-        self.avatar.move(motion)
-    self.flip(self.movement_vector[0])
+        current_motion = n.slide(current_motion)
+        current_motion.y = self.COLLIDING_FALL
+        self.avatar.move(current_motion)
+        self.handle_collision()
+    self.flip(self.controller_vector[0])
+    self.movement_vector[0] = current_motion.x
+    self.movement_vector[1] = current_motion.y
+
+func integrate_forces(delta):
+
+    if self.avatar.is_colliding():
+        self.movement_vector[1] = self.COLLIDING_FALL
+        print('colliding with ', self.avatar.get_collider())
+    else:
+        self.movement_vector[1] = self.movement_vector[1] + self.GRAVITY * delta
+
+func handle_collision():
+    return
 
 func apply_axis_threshold(axis_value):
     if abs(axis_value) < self.AXIS_THRESHOLD:

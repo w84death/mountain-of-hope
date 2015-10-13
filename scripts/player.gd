@@ -10,10 +10,6 @@ var attack_cooldown = 0.25
 var is_attack_on_cooldown = false
 var blast
 
-var target_cone
-var target_cone_vector = [0, 0]
-var target_cone_angle = 0.0
-
 var panel
 var hp_cap = 16
 
@@ -22,7 +18,7 @@ var EXIT_THRESHOLD = 30
 func _init(bag, player_id).(bag):
     self.bag = bag
     self.player_id = player_id
-    self.velocity = 200
+    self.velocity = 50
     self.hp = 10
     self.max_hp = 10
     self.score = 0
@@ -31,7 +27,6 @@ func _init(bag, player_id).(bag):
     self.hat = self.body_part_head.get_node('hat')
     self.body_part_body = self.avatar.get_node('body')
     self.body_part_footer = self.avatar.get_node('footer')
-    self.target_cone = self.avatar.get_node('attack_cone')
     self.animations = self.avatar.get_node('body_animations')
     self.blast = self.avatar.get_node('blast_animations')
 
@@ -62,7 +57,6 @@ func bind_keyboard_and_mouse():
     keyboard.register_handler(preload("res://scripts/input/handlers/player_move_key.gd").new(self.bag, self, 1, KEY_S, 1))
     keyboard.register_handler(preload("res://scripts/input/handlers/player_move_key.gd").new(self.bag, self, 0, KEY_A, -1))
     keyboard.register_handler(preload("res://scripts/input/handlers/player_move_key.gd").new(self.bag, self, 0, KEY_D, 1))
-    mouse.register_handler(preload("res://scripts/input/handlers/player_cone_mouse.gd").new(self.bag, self))
     mouse.register_handler(preload("res://scripts/input/handlers/player_attack_mouse.gd").new(self.bag, self))
 
 func enter_game():
@@ -84,14 +78,13 @@ func die():
 func process(delta):
     .process(delta)
     self.handle_items()
+    print(self.movement_vector)
 
 func modify_position(delta):
     .modify_position(delta)
-    self.flip(self.target_cone_vector[0])
     self.handle_animations()
 
 func handle_animations():
-
     if not self.animations.is_playing():
         if abs(self.movement_vector[0]) > self.AXIS_THRESHOLD || abs(self.movement_vector[1]) > self.AXIS_THRESHOLD:
             self.animations.play('run')
@@ -137,7 +130,7 @@ func attack():
             self.play_sound('attack1')
         self.blast.play('blast')
 
-    enemies = self.bag.enemies.get_enemies_near_object(self, self.attack_range, self.target_cone_vector, self.attack_width)
+    enemies = [] #self.bag.enemies.get_enemies_near_object(self, self.attack_range, self.target_cone_vector, self.attack_width)
     for enemy in enemies:
         if enemy.will_die(self.attack_strength):
             self.score += enemy.score
@@ -186,11 +179,10 @@ func reset():
     self.attack_strength = 1
     self.hp = 10
     self.max_hp = 10
-    self.target_cone_vector = [0, 0]
-    self.target_cone_angle = 0.0
     self.is_playing = false
     self.is_alive = true
     self.movement_vector = [0, 0]
+    self.controller_vector = [0, 0]
     self.score = 0
     self.is_attack_on_cooldown = false
 

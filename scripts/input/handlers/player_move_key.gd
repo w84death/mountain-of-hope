@@ -16,8 +16,8 @@ func handle(event):
     if event.is_echo():
         return
     if event.is_pressed() && self.bag.game_state.game_in_progress && self.player.is_playing && self.player.is_alive:
-        self.player.movement_vector[self.axis] = self.player.movement_vector[self.axis] + self.direction
-        if abs(self.player.movement_vector[self.axis]) > abs(self.direction):
-            self.player.movement_vector[self.axis] = self.direction
+        self.player.controller_vector[self.axis] = self.player.controller_vector[self.axis] + self.direction
+        if abs(self.player.controller_vector[self.axis]) > abs(self.direction):
+            self.player.controller_vector[self.axis] = self.direction
     if not event.is_pressed() && self.bag.game_state.game_in_progress && self.player.is_playing && self.player.is_alive:
-        self.player.movement_vector[self.axis] = self.player.movement_vector[self.axis] - self.direction
+        self.player.controller_vector[self.axis] = self.player.controller_vector[self.axis] - self.direction

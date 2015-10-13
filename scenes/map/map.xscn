@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="2" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
+<resource_file type="PackedScene" subresource_count="4" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
 	<resource type="RectangleShape2D" path="local://2">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2 name="extents"> 10.8738, 10 </vector2>
+
+	</resource>
+	<resource type="RectangleShape2D" path="local://3">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 10, 33.053 </vector2>
+
+	</resource>
+	<resource type="RectangleShape2D" path="local://4">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 10, 33.2158 </vector2>
 
 	</resource>
 	<main_resource>
@@ -12,7 +22,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="39">
+			<string_array  len="41">
 				<string> "Map" </string>
 				<string> "Control" </string>
 				<string> "margin/right" </string>
@@ -52,13 +62,15 @@
 				<string> "shape" </string>
 				<string> "trigger" </string>
 				<string> "_update_shape_index" </string>
+				<string> "StaticBody2D 2" </string>
+				<string> "StaticBody2D 3" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 4 </int>
+			<int> 8 </int>
 			<string> "nodes" </string>
-			<int_array  len="104"> 				-1, -1, 1, 0, -1, 7, 2, 0, 3, 0, 4, 1, 5, 2, 6, 3, 7, 3, 8, 4, 0, 0, 0, 9, 9, -1, 14, 10, 5, 11, 6, 12, 7, 13, 8, 14, 9, 15, 3, 16, 5, 17, 1, 18, 1, 19, 10, 20, 11, 21, 12, 22, 12, 23, 13, 0, 0, 0, 24, 24, -1, 12, 25, 14, 26, 15, 27, 1, 28, 16, 29, 17, 30, 1, 21, 12, 22, 12, 31, 18, 32, 11, 33, 10, 34, 11, 0, 2, 0, 35, 35, -1, 5, 25, 19, 26, 20, 36, 16, 37, 1, 38, 5, 0 </int_array>
+			<int_array  len="196"> 				-1, -1, 1, 0, -1, 7, 2, 0, 3, 0, 4, 1, 5, 2, 6, 3, 7, 3, 8, 4, 0, 0, 0, 9, 9, -1, 14, 10, 5, 11, 6, 12, 7, 13, 8, 14, 9, 15, 3, 16, 5, 17, 1, 18, 1, 19, 10, 20, 11, 21, 12, 22, 12, 23, 13, 0, 0, 0, 24, 24, -1, 12, 25, 14, 26, 15, 27, 1, 28, 16, 29, 17, 30, 1, 21, 12, 22, 12, 31, 18, 32, 11, 33, 10, 34, 11, 0, 2, 0, 35, 35, -1, 5, 25, 19, 26, 20, 36, 16, 37, 1, 38, 5, 0, 0, 0, 24, 39, -1, 12, 25, 21, 26, 22, 27, 1, 28, 23, 29, 24, 30, 1, 21, 12, 22, 12, 31, 18, 32, 11, 33, 10, 34, 11, 0, 4, 0, 35, 35, -1, 4, 25, 25, 36, 23, 37, 1, 38, 5, 0, 0, 0, 24, 40, -1, 12, 25, 26, 26, 27, 27, 1, 28, 28, 29, 29, 30, 1, 21, 12, 22, 12, 31, 18, 32, 11, 33, 10, 34, 11, 0, 6, 0, 35, 35, -1, 4, 25, 30, 36, 28, 37, 1, 38, 5, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="21" shared="false">
+			<array  len="31" shared="false">
 				<real> 40 </real>
 				<bool> False </bool>
 				<bool> True </bool>
@@ -214,6 +226,16 @@
 				<vector2> 0, 0 </vector2>
 				<vector2> 0.443849, -11.6916 </vector2>
 				<vector2> 3.06205, 1.8089 </vector2>
+				<vector2> 1249.17, 360.012 </vector2>
+				<vector2> 1, 11.1516 </vector2>
+				<resource  resource_type="Shape2D" path="local://3">  </resource>
+				<matrix32> 1, -0, 0, 1, 14.8049, -0.165951 </matrix32>
+				<vector2> 14.8049, -0.165951 </vector2>
+				<vector2> 31.4604, 359.086 </vector2>
+				<vector2> 1, 11.1805 </vector2>
+				<resource  resource_type="Shape2D" path="local://4">  </resource>
+				<matrix32> 1, -0, 0, 1, -16.6556, 0.165524 </matrix32>
+				<vector2> -16.6556, 0.165524 </vector2>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>
