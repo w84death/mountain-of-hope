@@ -58,7 +58,7 @@
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
 			<string_array  len="33">
-				<string> "white_rat" </string>
+				<string> "machettaso" </string>
 				<string> "KinematicBody2D" </string>
 				<string> "transform/pos" </string>
 				<string> "input/pickable" </string>
