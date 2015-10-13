@@ -67,8 +67,7 @@ func bind_keyboard_and_mouse():
 
 func enter_game():
     self.is_playing = true
-    self.spawn(self.bag.room_loader.get_spawn_position('initial' + str(self.player_id)))
-    self.panel.show()
+    self.spawn(Vector2(640, 360))
 
 func spawn(position):
     self.is_alive = true
@@ -83,9 +82,7 @@ func die():
         self.bag.action_controller.end_game()
 
 func process(delta):
-    self.adjust_attack_cone()
     .process(delta)
-    self.check_doors()
     self.handle_items()
 
 func modify_position(delta):
