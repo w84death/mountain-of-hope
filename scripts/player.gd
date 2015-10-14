@@ -25,16 +25,11 @@ func _init(bag, player_id).(bag):
     self.max_hp = 10
     self.score = 0
     self.avatar = preload("res://scenes/player/player.xscn").instance()
-    self.body_part_head = self.avatar.get_node('head')
-    self.hat = self.body_part_head.get_node('hat')
-    self.body_part_body = self.avatar.get_node('body')
-    self.body_part_footer = self.avatar.get_node('footer')
-    self.animations = self.avatar.get_node('body_animations')
-    self.blast = self.avatar.get_node('blast_animations')
+    self.animations = self.avatar.get_node('animations')
+    self.body = self.avatar.get_node('body')
 
-    self.bind_gamepad(player_id)
+    #self.bind_gamepad(player_id)
     #self.panel = self.bag.hud.bind_player_panel(player_id)
-    self.hat.set_frame(player_id)
     self.update_bars()
 
     self.sounds['hit'] = 'player_hit'

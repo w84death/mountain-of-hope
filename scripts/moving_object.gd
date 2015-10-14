@@ -6,9 +6,7 @@ var controller_vector = [0, 0]
 
 var AXIS_THRESHOLD = 0.15
 
-var body_part_head
-var body_part_body
-var body_part_footer
+var body
 var animations
 var hat = false
 
@@ -136,11 +134,7 @@ func flip(direction):
     if direction > 0:
         flip_sprite = true
 
-    self.body_part_head.set_flip_h(flip_sprite)
-    self.body_part_body.set_flip_h(flip_sprite)
-    self.body_part_footer.set_flip_h(flip_sprite)
-    if self.hat:
-        self.hat.set_flip_h(flip_sprite)
+    self.body.set_flip_h(flip_sprite)
 
 func reset_movement():
     self.movement_vector = [0, 0]
