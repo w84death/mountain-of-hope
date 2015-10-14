@@ -116,21 +116,18 @@ func add_platforms(segment):
 
     randomize()
 
-    while iterator < self.SEGMENT_SIZE - 3:
+    while iterator < self.SEGMENT_SIZE - 2:
         segment = self.generate_single_platform(segment, iterator)
 
         last_iterator = iterator
 
         if randi() % 10 == 0:
-            iterator = iterator + 2
+            iterator = iterator + 5
         else:
-            if randi() % 2 == 0:
-                iterator = iterator + 3
-            else:
-                iterator = iterator + 4
+            iterator = iterator + 4
 
-    if last_iterator < self.SEGMENT_SIZE - 3:
-        segment = self.generate_single_platform(segment, self.SEGMENT_SIZE - 3)
+    if last_iterator < self.SEGMENT_SIZE - 4:
+        segment = self.generate_single_platform(segment, self.SEGMENT_SIZE - 2)
 
     return segment
 
