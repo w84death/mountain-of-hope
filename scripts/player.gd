@@ -77,6 +77,11 @@ func die():
 func process(delta):
     .process(delta)
     self.handle_items()
+    self.check_map_segment()
+
+func check_map_segment():
+    var height = -1 * int(self.avatar.get_pos().y)
+    self.bag.map.update_segments(height)
 
 func modify_position(delta):
     .modify_position(delta)
