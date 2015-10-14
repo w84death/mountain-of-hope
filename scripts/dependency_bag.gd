@@ -1,5 +1,6 @@
 
 var root
+var board
 
 var game_state = preload("res://scripts/game_state.gd").new()
 var action_controller = preload("res://scripts/controllers/action_controller.gd").new()
@@ -14,6 +15,7 @@ var processing = preload("res://scripts/processing.gd").new()
 var camera = preload("res://scripts/camera.gd").new()
 var map = preload("res://scripts/map/map.gd").new()
 var room_loader = preload("res://scripts/map/room_loader.gd").new()
+var menu = preload('res://scripts/menu.gd').new()
 var sample_player
 var stream_player
 
@@ -31,6 +33,7 @@ func _init(root_node):
     self.action_controller._init_bag(self)
     self.room_loader._init_bag(self)
     self.map._init_bag(self)
+    self.menu._init_bag(self)
     self.sample_player = self.root.get_node('SamplePlayer')
     self.stream_player = self.root.get_node('StreamPlayer')
 

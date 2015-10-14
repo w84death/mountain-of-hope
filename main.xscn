@@ -63,7 +63,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="45">
+			<string_array  len="65">
 				<string> "root" </string>
 				<string> "Control" </string>
 				<string> "margin/right" </string>
@@ -109,13 +109,33 @@
 				<string> "stream/paused" </string>
 				<string> "stream/loop_restart_time" </string>
 				<string> "stream/buffering_ms" </string>
+				<string> "Viewport" </string>
+				<string> "rect" </string>
+				<string> "own_world" </string>
+				<string> "world" </string>
+				<string> "transparent_bg" </string>
+				<string> "render_target/enabled" </string>
+				<string> "render_target/v_flip" </string>
+				<string> "render_target/clear_on_new_frame" </string>
+				<string> "render_target/filter" </string>
+				<string> "render_target/gen_mipmaps" </string>
+				<string> "render_target/update_mode" </string>
+				<string> "audio_listener/enable_2d" </string>
+				<string> "audio_listener/enable_3d" </string>
+				<string> "physics/object_picking" </string>
+				<string> "board" </string>
+				<string> "Label" </string>
+				<string> "text" </string>
+				<string> "percent_visible" </string>
+				<string> "lines_skipped" </string>
+				<string> "max_lines_visible" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 6 </int>
+			<int> 9 </int>
 			<string> "nodes" </string>
-			<int_array  len="140"> 				-1, -1, 1, 0, -1, 8, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 4, 8, 5, 9, 6, 0, 0, 0, 11, 10, -1, 9, 12, 7, 13, 7, 14, 8, 2, 9, 4, 2, 5, 3, 6, 4, 7, 4, 15, 2, 0, 1, 0, 1, 16, -1, 8, 14, 10, 17, 11, 2, 10, 3, 11, 4, 2, 5, 3, 6, 4, 7, 4, 0, 2, 0, 18, 10, -1, 2, 19, 12, 20, 13, 0, 0, 0, 21, 21, -1, 14, 22, 7, 23, 14, 24, 15, 25, 16, 26, 15, 27, 15, 28, 15, 29, 17, 30, 15, 31, 15, 32, 15, 33, 4, 34, 15, 35, 15, 0, 0, 0, 36, 36, -1, 8, 37, 18, 38, 3, 39, 3, 40, 15, 41, 3, 42, 2, 43, 15, 44, 19, 0 </int_array>
+			<int_array  len="221"> 				-1, -1, 1, 0, -1, 8, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 4, 8, 5, 9, 6, 0, 0, 0, 11, 10, -1, 9, 12, 7, 13, 7, 14, 8, 2, 9, 4, 2, 5, 3, 6, 4, 7, 4, 15, 2, 0, 1, 0, 1, 16, -1, 8, 14, 10, 17, 11, 2, 10, 3, 11, 4, 2, 5, 3, 6, 4, 7, 4, 0, 2, 0, 18, 10, -1, 2, 19, 12, 20, 13, 0, 0, 0, 21, 21, -1, 14, 22, 7, 23, 14, 24, 15, 25, 16, 26, 15, 27, 15, 28, 15, 29, 17, 30, 15, 31, 15, 32, 15, 33, 4, 34, 15, 35, 15, 0, 0, 0, 36, 36, -1, 8, 37, 18, 38, 3, 39, 3, 40, 15, 41, 3, 42, 2, 43, 15, 44, 19, 0, 0, 0, 45, 45, -1, 13, 46, 20, 47, 2, 48, 21, 49, 2, 50, 2, 51, 2, 52, 3, 53, 2, 54, 2, 55, 4, 56, 2, 57, 2, 58, 2, 0, 6, 0, 1, 59, -1, 6, 2, 22, 3, 22, 4, 2, 5, 3, 6, 4, 7, 4, 0, 0, 0, 60, 60, -1, 11, 14, 23, 17, 24, 2, 25, 3, 26, 4, 3, 5, 3, 6, 4, 61, 27, 62, 16, 63, 17, 64, 28, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="20" shared="false">
+			<array  len="29" shared="false">
 				<real> 1280 </real>
 				<real> 720 </real>
 				<bool> False </bool>
@@ -130,7 +150,7 @@
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -782.592, -614.872 </vector2>
+							<vector2> -450.264, -285.603 </vector2>
 							<string> "snap_grid" </string>
 							<bool> False </bool>
 							<string> "snap_offset" </string>
@@ -150,7 +170,7 @@
 							<string> "snap_step" </string>
 							<vector2> 10, 10 </vector2>
 							<string> "zoom" </string>
-							<real> 0.291989 </real>
+							<real> 0.487675 </real>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
@@ -271,6 +291,14 @@
 				<int> 0 </int>
 				<resource  external="6">  </resource>
 				<int> 500 </int>
+				<rect2> 0, 0, 1280, 720 </rect2>
+				<resource name=""></resource>				<real> 40 </real>
+				<real> 9 </real>
+				<real> 18 </real>
+				<real> 112 </real>
+				<real> 31 </real>
+				<string> "dsalkfalkdsjfa;lsdj" </string>
+				<int> -1 </int>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>
