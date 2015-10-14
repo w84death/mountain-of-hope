@@ -71,7 +71,7 @@
 				<int> 100 </int>
 				<bool> False </bool>
 				<resource  resource_type="Shape2D" path="local://7">  </resource>
-				<matrix32> 1.91143, -0, 0, 3.34937, 1.22618, -31.8372 </matrix32>
+				<matrix32> 1.91143, -0, 0, 3.00995, -0.0914172, -34.9321 </matrix32>
 				<int> 1 </int>
 				<real> 0.08 </real>
 				<dictionary  shared="false">
@@ -220,8 +220,8 @@
 				<vector2> 2, 2 </vector2>
 				<resource  external="0">  </resource>
 				<rect2> 13, 3, 38, 40 </rect2>
-				<vector2> 1.22618, -31.8372 </vector2>
-				<vector2> 1.91143, 3.34937 </vector2>
+				<vector2> -0.0914172, -34.9321 </vector2>
+				<vector2> 1.91143, 3.00995 </vector2>
 				<int> 0 </int>
 				<real> 0 </real>
 				<node_path> ".." </node_path>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="3" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
-	<ext_resource path="res://scenes/hud/assets/dos437-16.fnt" type="Font" index="1"></ext_resource>
+<resource_file type="PackedScene" subresource_count="4" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
 	<ext_resource path="res://scenes/hud/assets/dos437-24.fnt" type="Font" index="0"></ext_resource>
+	<ext_resource path="res://scenes/items/assets/sliwowica.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://scenes/items/assets/mountain.png" type="Texture" index="2"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
@@ -9,7 +10,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="26">
+			<string_array  len="30">
 				<string> "hud" </string>
 				<string> "Control" </string>
 				<string> "anchor/right" </string>
@@ -27,22 +28,26 @@
 				<string> "margin/left" </string>
 				<string> "margin/top" </string>
 				<string> "margin/right" </string>
-				<string> "score" </string>
+				<string> "alcohol" </string>
 				<string> "Label" </string>
 				<string> "custom_fonts/font" </string>
 				<string> "text" </string>
-				<string> "align" </string>
 				<string> "percent_visible" </string>
 				<string> "lines_skipped" </string>
 				<string> "max_lines_visible" </string>
-				<string> "p1x" </string>
+				<string> "Sprite" </string>
+				<string> "transform/pos" </string>
+				<string> "transform/scale" </string>
+				<string> "texture" </string>
+				<string> "score" </string>
+				<string> "score 2" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 5 </int>
+			<int> 7 </int>
 			<string> "nodes" </string>
-			<int_array  len="131"> 				-1, -1, 1, 0, -1, 7, 2, 0, 3, 0, 4, 1, 5, 2, 6, 3, 7, 3, 8, 4, 0, 0, 0, 10, 9, -1, 7, 2, 0, 11, 5, 4, 1, 5, 2, 6, 3, 7, 3, 12, 1, 0, 1, 0, 1, 13, -1, 8, 14, 6, 15, 7, 16, 6, 11, 7, 4, 1, 5, 2, 6, 3, 7, 3, 0, 2, 0, 18, 17, -1, 13, 14, 8, 15, 9, 16, 10, 11, 11, 4, 2, 5, 2, 6, 3, 19, 12, 20, 13, 21, 0, 22, 14, 23, 15, 24, 16, 0, 2, 0, 18, 25, -1, 13, 14, 17, 15, 5, 16, 18, 11, 19, 4, 2, 5, 2, 6, 3, 19, 20, 20, 21, 21, 0, 22, 14, 23, 15, 24, 16, 0 </int_array>
+			<int_array  len="153"> 				-1, -1, 1, 0, -1, 7, 2, 0, 3, 0, 4, 1, 5, 2, 6, 3, 7, 3, 8, 4, 0, 0, 0, 10, 9, -1, 7, 2, 0, 11, 5, 4, 1, 5, 2, 6, 3, 7, 3, 12, 1, 0, 1, 0, 1, 13, -1, 8, 14, 6, 15, 7, 16, 6, 11, 7, 4, 1, 5, 2, 6, 3, 7, 3, 0, 2, 0, 18, 17, -1, 12, 14, 8, 15, 9, 16, 10, 11, 5, 4, 2, 5, 2, 6, 3, 19, 11, 20, 12, 21, 13, 22, 14, 23, 15, 0, 2, 0, 24, 24, -1, 3, 25, 16, 26, 17, 27, 18, 0, 2, 0, 18, 28, -1, 12, 14, 19, 15, 9, 16, 20, 11, 5, 4, 2, 5, 2, 6, 3, 19, 11, 20, 21, 21, 13, 22, 14, 23, 15, 0, 2, 0, 24, 29, -1, 3, 25, 22, 26, 17, 27, 23, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="22" shared="false">
+			<array  len="24" shared="false">
 				<int> 1 </int>
 				<bool> False </bool>
 				<bool> True </bool>
@@ -55,7 +60,7 @@
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> 399.116, -107.613 </vector2>
+							<vector2> 137.251, -102.937 </vector2>
 							<string> "snap_grid" </string>
 							<bool> True </bool>
 							<string> "snap_offset" </string>
@@ -75,7 +80,7 @@
 							<string> "snap_step" </string>
 							<vector2> 10, 10 </vector2>
 							<string> "zoom" </string>
-							<real> 1.670184 </real>
+							<real> 1.360375 </real>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
@@ -186,20 +191,22 @@
 				<real> 40 </real>
 				<real> 640 </real>
 				<real> 20 </real>
-				<real> -171 </real>
-				<real> 10 </real>
-				<real> 172 </real>
-				<real> 35 </real>
+				<real> -400 </real>
+				<real> -10 </real>
+				<real> -296 </real>
 				<resource  external="0">  </resource>
-				<string> "SCORE: 000000 ³ LIFE: ²²²²°°°°°°" </string>
+				<string> "ALCOHOL:&#000a;²²²²°°°°°°" </string>
 				<real> 1 </real>
 				<int> 0 </int>
 				<int> -1 </int>
-				<real> -81 </real>
-				<real> 81 </real>
-				<real> 56 </real>
+				<vector2> -422, 16 </vector2>
+				<vector2> 2, 2 </vector2>
 				<resource  external="1">  </resource>
-				<string> "MOUNTAINS OF FREEDOM BY P1X" </string>
+				<real> 360 </real>
+				<real> 501 </real>
+				<string> "SCORE:&#000a;320m" </string>
+				<vector2> 324, 14 </vector2>
+				<resource  external="2">  </resource>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>
