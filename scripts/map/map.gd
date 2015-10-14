@@ -42,6 +42,7 @@ func generate_next_map_segment():
 
     new_segment = self.add_walls(new_segment)
     new_segment = self.add_separator(new_segment)
+    new_segment = self.add_platforms(new_segment)
 
     self.segments.append(new_segment)
     self.apply_segment(next_segment_index)
@@ -108,3 +109,15 @@ func update_segments(player_height):
     if overflow > 100 && segment_num > self.last_visited_segment:
         self.last_visited_segment = segment_num
         self.generate_next_map_segment()
+
+func add_platforms(segment):
+    var iterator = 2
+    var new_platform
+
+    while iterator < self.SEGMENT_SIZE - 1:
+        new_platform = self.platforms[0].template.instance()
+
+        segment = self.add_segment_object(segment, 400, (iterator + 1) * self.SEGMENT_LINE_HEIGHT, new_platform)
+        iterator = iterator + 2
+
+    return segment
