@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="3" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
+<resource_file type="PackedScene" subresource_count="5" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
 	<ext_resource path="res://scenes/player/assets/player.png" type="Texture" index="0"></ext_resource>
 	<resource type="CircleShape2D" path="local://7">
 		<real name="custom_solver_bias"> 0 </real>
 		<real name="radius"> 10 </real>
+
+	</resource>
+	<resource type="Animation" path="local://8">
+		<string name="resource/name"> "idle" </string>
+		<real name="length"> 1 </real>
+		<bool name="loop"> False </bool>
+		<real name="step"> 0.1 </real>
+
+	</resource>
+	<resource type="Animation" path="local://9">
+		<string name="resource/name"> "run" </string>
+		<real name="length"> 0.5 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "body:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> False </bool>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.1, 0.2, 0.3 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<int> 0 </int>
+				<int> 1 </int>
+				<int> 0 </int>
+				<int> 2 </int>
+			</array>
+		</dictionary>
 
 	</resource>
 	<main_resource>
@@ -13,7 +45,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="47">
+			<string_array  len="50">
 				<string> "player" </string>
 				<string> "KinematicBody2D" </string>
 				<string> "z/z" </string>
@@ -30,6 +62,7 @@
 				<string> "transform/pos" </string>
 				<string> "transform/scale" </string>
 				<string> "texture" </string>
+				<string> "hframes" </string>
 				<string> "region_rect" </string>
 				<string> "collision" </string>
 				<string> "CollisionShape2D" </string>
@@ -41,6 +74,8 @@
 				<string> "playback/process_mode" </string>
 				<string> "playback/default_blend_time" </string>
 				<string> "root/root" </string>
+				<string> "anims/idle" </string>
+				<string> "anims/run" </string>
 				<string> "playback/active" </string>
 				<string> "playback/speed" </string>
 				<string> "blend_times" </string>
@@ -65,13 +100,13 @@
 			<string> "node_count" </string>
 			<int> 5 </int>
 			<string> "nodes" </string>
-			<int_array  len="115"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 3, 6, 1, 7, 4, 8, 4, 9, 5, 10, 6, 0, 0, 0, 12, 11, -1, 4, 13, 7, 14, 8, 15, 9, 16, 10, 0, 0, 0, 18, 17, -1, 5, 13, 11, 14, 12, 19, 2, 20, 1, 21, 13, 0, 0, 0, 23, 22, -1, 7, 24, 4, 25, 14, 26, 15, 27, 16, 28, 17, 29, 18, 30, 19, 0, 0, 0, 31, 31, -1, 15, 32, 4, 33, 1, 34, 16, 35, 14, 36, 20, 37, 13, 38, 21, 39, 22, 40, 13, 41, 16, 42, 16, 43, 23, 44, 23, 45, 23, 46, 23, 0 </int_array>
+			<int_array  len="121"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 3, 6, 1, 7, 4, 8, 4, 9, 5, 10, 6, 0, 0, 0, 12, 11, -1, 5, 13, 7, 14, 8, 15, 9, 16, 10, 17, 11, 0, 0, 0, 19, 18, -1, 5, 13, 12, 14, 13, 20, 2, 21, 1, 22, 14, 0, 0, 0, 24, 23, -1, 9, 25, 4, 26, 15, 27, 16, 28, 17, 29, 18, 30, 19, 31, 20, 32, 21, 33, 22, 0, 0, 0, 34, 34, -1, 15, 35, 4, 36, 1, 37, 19, 38, 15, 39, 23, 40, 14, 41, 24, 42, 25, 43, 14, 44, 19, 45, 19, 46, 26, 47, 26, 48, 26, 49, 26, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="24" shared="false">
+			<array  len="27" shared="false">
 				<int> 100 </int>
 				<bool> False </bool>
 				<resource  resource_type="Shape2D" path="local://7">  </resource>
-				<matrix32> 1.91143, -0, 0, 3.00995, -0.0914172, -34.9321 </matrix32>
+				<matrix32> 1.91143, -0, 0, 3.00995, -0.0914183, -34.9321 </matrix32>
 				<int> 1 </int>
 				<real> 0.08 </real>
 				<dictionary  shared="false">
@@ -82,7 +117,7 @@
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -130.348, -86.4537 </vector2>
+							<vector2> -256.523, -111.828 </vector2>
 							<string> "snap_grid" </string>
 							<bool> False </bool>
 							<string> "snap_offset" </string>
@@ -102,7 +137,7 @@
 							<string> "snap_step" </string>
 							<vector2> 10, 10 </vector2>
 							<string> "zoom" </string>
-							<real> 3.794777 </real>
+							<real> 1.850618 </real>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
@@ -199,9 +234,9 @@
 						<string> "Anim" </string>
 						<dictionary  shared="false">
 							<string> "animation" </string>
-							<string> "" </string>
+							<string> "run" </string>
 							<string> "editing" </string>
-							<bool> False </bool>
+							<bool> True </bool>
 							<string> "player" </string>
 							<node_path> "animations" </node_path>
 							<string> "visible" </string>
@@ -216,20 +251,23 @@
 						<int> 0 </int>
 					</dictionary>
 				</dictionary>
-				<vector2> 0, -31 </vector2>
+				<vector2> -5, -31 </vector2>
 				<vector2> 2, 2 </vector2>
 				<resource  external="0">  </resource>
+				<int> 3 </int>
 				<rect2> 13, 3, 38, 40 </rect2>
-				<vector2> -0.0914172, -34.9321 </vector2>
+				<vector2> -0.0914183, -34.9321 </vector2>
 				<vector2> 1.91143, 3.00995 </vector2>
 				<int> 0 </int>
 				<real> 0 </real>
 				<node_path> ".." </node_path>
+				<resource  resource_type="Animation" path="local://8">  </resource>
+				<resource  resource_type="Animation" path="local://9">  </resource>
 				<bool> True </bool>
 				<real> 1 </real>
 				<array  len="0" shared="false">
 				</array>
-				<string> "" </string>
+				<string> "run" </string>
 				<vector2> 1, 1 </vector2>
 				<int> -10000000 </int>
 				<int> 1280 </int>
