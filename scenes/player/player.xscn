@@ -231,7 +231,7 @@
 				<vector2> 1, 1 </vector2>
 				<int> -10000000 </int>
 				<int> 1280 </int>
-				<int> 10000000 </int>
+				<int> 720 </int>
 				<real> 0.2 </real>
 			</array>
 			<string> "version" </string>
