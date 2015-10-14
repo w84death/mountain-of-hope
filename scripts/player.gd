@@ -60,7 +60,7 @@ func bind_keyboard_and_mouse():
 
 func enter_game():
     self.is_playing = true
-    self.spawn(Vector2(640, 360))
+    self.spawn(Vector2(640, -60))
 
 func spawn(position):
     self.is_alive = true
@@ -92,10 +92,10 @@ func handle_animations():
     if not self.animations.is_playing():
         if abs(self.movement_vector[0]) > self.AXIS_THRESHOLD || abs(self.movement_vector[1]) > self.AXIS_THRESHOLD:
             self.animations.play('run')
-            print('run?')
+            #print('run?')
         else:
             self.animations.play('idle')
-            print('idle?')
+            #print('idle?')
     else:
         if self.animations.get_current_animation() == 'idle' && (abs(self.movement_vector[0]) > self.AXIS_THRESHOLD || abs(self.movement_vector[1]) > self.AXIS_THRESHOLD):
             self.animations.play('run')
