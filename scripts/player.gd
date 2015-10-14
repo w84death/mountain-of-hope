@@ -28,6 +28,7 @@ func _init(bag, player_id).(bag):
     self.animations = self.avatar.get_node('animations')
     self.body = self.avatar.get_node('body')
 
+
     #self.bind_gamepad(player_id)
     #self.panel = self.bag.hud.bind_player_panel(player_id)
     self.update_bars()
