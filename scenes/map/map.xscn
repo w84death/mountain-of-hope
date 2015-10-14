@@ -105,7 +105,7 @@
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -1155.15, -1133 </vector2>
+							<vector2> -1033.86, -933.58 </vector2>
 							<string> "snap_grid" </string>
 							<bool> True </bool>
 							<string> "snap_offset" </string>
@@ -125,7 +125,7 @@
 							<string> "snap_step" </string>
 							<vector2> 10, 10 </vector2>
 							<string> "zoom" </string>
-							<real> 0.214639 </real>
+							<real> 0.237827 </real>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
@@ -245,10 +245,10 @@
 				<vector2> 2, 2 </vector2>
 				<resource  external="0">  </resource>
 				<vector2> -360, -280 </vector2>
-				<vector2> 133.335, 602.24 </vector2>
+				<vector2> 133.335, 634.24 </vector2>
 				<resource  external="1">  </resource>
-				<vector2> 653.008, 599.953 </vector2>
-				<vector2> 1173.04, 598.445 </vector2>
+				<vector2> 653.008, 631.953 </vector2>
+				<vector2> 1173.04, 630.445 </vector2>
 				<vector2> 1249.17, 360.012 </vector2>
 				<vector2> 1, 11.1516 </vector2>
 				<resource  resource_type="Shape2D" path="local://3">  </resource>
