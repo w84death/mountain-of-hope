@@ -112,12 +112,35 @@ func update_segments(player_height):
 
 func add_platforms(segment):
     var iterator = 2
-    var new_platform
+    var last_iterator = 0
 
-    while iterator < self.SEGMENT_SIZE - 1:
-        new_platform = self.platforms[0].template.instance()
+    randomize()
 
-        segment = self.add_segment_object(segment, 400, (iterator + 1) * self.SEGMENT_LINE_HEIGHT, new_platform)
-        iterator = iterator + 2
+    while iterator < self.SEGMENT_SIZE - 3:
+        segment = self.generate_single_platform(segment, iterator)
+
+        last_iterator = iterator
+
+        if randi() % 10 == 0:
+            iterator = iterator + 2
+        else:
+            if randi() % 2 == 0:
+                iterator = iterator + 3
+            else:
+                iterator = iterator + 4
+
+    if last_iterator < self.SEGMENT_SIZE - 3:
+        segment = self.generate_single_platform(segment, self.SEGMENT_SIZE - 3)
+
+    return segment
+
+func generate_single_platform(segment, iterator):
+    var template = self.platforms[randi() % self.platforms.size()]
+    var new_platform = template.template.instance()
+
+    var horizontal_position = randi() % (self.playable_width - template.width)
+    horizontal_position = horizontal_position + self.SCREEN_MARGIN + int(template.width / 2)
+
+    segment = self.add_segment_object(segment, horizontal_position, (iterator + 1) * self.SEGMENT_LINE_HEIGHT, new_platform)
 
     return segment
