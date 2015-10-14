@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="9" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
-	<ext_resource path="res://scenes/dance.ogg" type="AudioStream" index="6"></ext_resource>
+<resource_file type="PackedScene" subresource_count="12" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
+	<ext_resource path="res://scenes/dance.ogg" type="AudioStream" index="8"></ext_resource>
 	<ext_resource path="res://scripts/main.gd" type="Script" index="0"></ext_resource>
-	<ext_resource path="res://scenes/player/assets/attack_left.wav" type="Sample" index="2"></ext_resource>
-	<ext_resource path="res://scenes/player/assets/die.wav" type="Sample" index="4"></ext_resource>
-	<ext_resource path="res://scenes/player/assets/attack_right.wav" type="Sample" index="3"></ext_resource>
-	<ext_resource path="res://scenes/player/assets/hit.wav" type="Sample" index="5"></ext_resource>
+	<ext_resource path="res://scenes/hud/assets/corner.png" type="Texture" index="9"></ext_resource>
 	<ext_resource path="res://scenes/hud/assets/logo.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://scenes/player/assets/attack_right.wav" type="Sample" index="5"></ext_resource>
+	<ext_resource path="res://scenes/player/assets/die.wav" type="Sample" index="6"></ext_resource>
+	<ext_resource path="res://scenes/player/assets/hit.wav" type="Sample" index="7"></ext_resource>
+	<ext_resource path="res://scenes/player/assets/attack_left.wav" type="Sample" index="4"></ext_resource>
+	<ext_resource path="res://scenes/hud/assets/goral.png" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://scenes/hud/assets/dos437-16.fnt" type="Font" index="3"></ext_resource>
 	<resource type="SampleLibrary" path="local://1">
-		<dictionary name="samples/player_hit" shared="false">
+		<dictionary name="samples/player_attack2" shared="false">
 			<string> "db" </string>
 			<real> 0 </real>
 			<string> "pitch" </string>
@@ -22,15 +25,7 @@
 			<string> "pitch" </string>
 			<real> 1 </real>
 			<string> "sample" </string>
-			<resource  external="2">  </resource>
-		</dictionary>
-		<dictionary name="samples/player_attack2" shared="false">
-			<string> "db" </string>
-			<real> 0 </real>
-			<string> "pitch" </string>
-			<real> 1 </real>
-			<string> "sample" </string>
-			<resource  external="3">  </resource>
+			<resource  external="4">  </resource>
 		</dictionary>
 		<dictionary name="samples/you_can" shared="false">
 			<string> "db" </string>
@@ -45,7 +40,7 @@
 			<string> "pitch" </string>
 			<real> 1 </real>
 			<string> "sample" </string>
-			<resource  external="4">  </resource>
+			<resource  external="6">  </resource>
 		</dictionary>
 		<dictionary name="samples/game_over" shared="false">
 			<string> "db" </string>
@@ -54,6 +49,14 @@
 			<real> 1 </real>
 			<string> "sample" </string>
 			<resource name=""></resource>		</dictionary>
+		<dictionary name="samples/player_hit" shared="false">
+			<string> "db" </string>
+			<real> 0 </real>
+			<string> "pitch" </string>
+			<real> 1 </real>
+			<string> "sample" </string>
+			<resource  external="7">  </resource>
+		</dictionary>
 
 	</resource>
 	<main_resource>
@@ -63,7 +66,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="65">
+			<string_array  len="81">
 				<string> "root" </string>
 				<string> "Control" </string>
 				<string> "margin/right" </string>
@@ -83,8 +86,19 @@
 				<string> "center" </string>
 				<string> "margin/top" </string>
 				<string> "Sprite" </string>
+				<string> "transform/pos" </string>
 				<string> "transform/scale" </string>
 				<string> "texture" </string>
+				<string> "goral_prawy" </string>
+				<string> "press_start" </string>
+				<string> "Label" </string>
+				<string> "custom_fonts/font" </string>
+				<string> "text" </string>
+				<string> "percent_visible" </string>
+				<string> "lines_skipped" </string>
+				<string> "max_lines_visible" </string>
+				<string> "goral_lewy" </string>
+				<string> "flip_h" </string>
 				<string> "SamplePlayer" </string>
 				<string> "config/polyphony" </string>
 				<string> "config/samples" </string>
@@ -124,18 +138,23 @@
 				<string> "audio_listener/enable_3d" </string>
 				<string> "physics/object_picking" </string>
 				<string> "board" </string>
-				<string> "Label" </string>
-				<string> "text" </string>
-				<string> "percent_visible" </string>
-				<string> "lines_skipped" </string>
-				<string> "max_lines_visible" </string>
+				<string> "corner" </string>
+				<string> "anchor/left" </string>
+				<string> "centered" </string>
+				<string> "vframes" </string>
+				<string> "hframes" </string>
+				<string> "frame" </string>
+				<string> "corner1" </string>
+				<string> "corner2" </string>
+				<string> "anchor/top" </string>
+				<string> "corner3" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 9 </int>
+			<int> 20 </int>
 			<string> "nodes" </string>
-			<int_array  len="221"> 				-1, -1, 1, 0, -1, 8, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 4, 8, 5, 9, 6, 0, 0, 0, 11, 10, -1, 9, 12, 7, 13, 7, 14, 8, 2, 9, 4, 2, 5, 3, 6, 4, 7, 4, 15, 2, 0, 1, 0, 1, 16, -1, 8, 14, 10, 17, 11, 2, 10, 3, 11, 4, 2, 5, 3, 6, 4, 7, 4, 0, 2, 0, 18, 10, -1, 2, 19, 12, 20, 13, 0, 0, 0, 21, 21, -1, 14, 22, 7, 23, 14, 24, 15, 25, 16, 26, 15, 27, 15, 28, 15, 29, 17, 30, 15, 31, 15, 32, 15, 33, 4, 34, 15, 35, 15, 0, 0, 0, 36, 36, -1, 8, 37, 18, 38, 3, 39, 3, 40, 15, 41, 3, 42, 2, 43, 15, 44, 19, 0, 0, 0, 45, 45, -1, 13, 46, 20, 47, 2, 48, 21, 49, 2, 50, 2, 51, 2, 52, 3, 53, 2, 54, 2, 55, 4, 56, 2, 57, 2, 58, 2, 0, 6, 0, 1, 59, -1, 6, 2, 22, 3, 22, 4, 2, 5, 3, 6, 4, 7, 4, 0, 0, 0, 60, 60, -1, 11, 14, 23, 17, 24, 2, 25, 3, 26, 4, 3, 5, 3, 6, 4, 61, 27, 62, 16, 63, 17, 64, 28, 0 </int_array>
+			<int_array  len="446"> 				-1, -1, 1, 0, -1, 8, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 4, 8, 5, 9, 6, 0, 0, 0, 11, 10, -1, 10, 12, 7, 13, 7, 14, 8, 2, 9, 4, 2, 5, 3, 6, 4, 7, 4, 15, 2, 9, 10, 0, 1, 0, 1, 16, -1, 9, 14, 11, 17, 12, 2, 11, 3, 12, 4, 2, 5, 3, 6, 4, 7, 4, 9, 13, 0, 2, 0, 18, 10, -1, 3, 19, 14, 20, 15, 21, 16, 0, 2, 0, 18, 22, -1, 3, 19, 17, 20, 15, 21, 18, 0, 2, 0, 24, 23, -1, 12, 14, 19, 17, 20, 2, 21, 3, 22, 4, 3, 5, 3, 6, 4, 25, 23, 26, 24, 27, 25, 28, 26, 29, 27, 0, 2, 0, 18, 30, -1, 4, 19, 28, 20, 15, 21, 18, 31, 3, 0, 0, 0, 32, 32, -1, 14, 33, 7, 34, 29, 35, 30, 36, 25, 37, 30, 38, 30, 39, 30, 40, 26, 41, 30, 42, 30, 43, 30, 44, 4, 45, 30, 46, 30, 0, 0, 0, 47, 47, -1, 8, 48, 31, 49, 3, 50, 3, 51, 30, 52, 3, 53, 2, 54, 30, 55, 32, 0, 0, 0, 56, 56, -1, 13, 57, 33, 58, 2, 59, 34, 60, 2, 61, 2, 62, 2, 63, 3, 64, 2, 65, 2, 66, 4, 67, 2, 68, 2, 69, 2, 0, 9, 0, 1, 70, -1, 6, 2, 35, 3, 35, 4, 2, 5, 3, 6, 4, 7, 4, 0, 0, 0, 24, 24, -1, 11, 14, 36, 17, 37, 2, 38, 3, 39, 4, 3, 5, 3, 6, 4, 26, 40, 27, 25, 28, 26, 29, 27, 0, 0, 0, 1, 71, -1, 7, 72, 7, 12, 7, 4, 2, 5, 3, 6, 4, 7, 4, 9, 41, 0, 12, 0, 18, 18, -1, 7, 19, 42, 20, 15, 21, 43, 73, 2, 74, 4, 75, 4, 76, 7, 0, 0, 0, 1, 77, -1, 5, 4, 2, 5, 3, 6, 4, 7, 4, 9, 44, 0, 14, 0, 18, 18, -1, 5, 20, 15, 21, 43, 73, 2, 74, 4, 75, 4, 0, 0, 0, 1, 78, -1, 6, 79, 7, 13, 7, 4, 2, 5, 3, 6, 4, 7, 4, 0, 16, 0, 18, 18, -1, 7, 19, 45, 20, 15, 21, 43, 73, 2, 74, 4, 75, 4, 76, 4, 0, 0, 0, 1, 80, -1, 8, 72, 7, 79, 7, 12, 7, 13, 7, 4, 2, 5, 3, 6, 4, 7, 4, 0, 18, 0, 18, 18, -1, 7, 19, 46, 20, 15, 21, 43, 73, 2, 74, 4, 75, 4, 76, 47, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="29" shared="false">
+			<array  len="48" shared="false">
 				<real> 1280 </real>
 				<real> 720 </real>
 				<bool> False </bool>
@@ -150,7 +169,7 @@
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -450.264, -285.603 </vector2>
+							<vector2> -186.766, -167.383 </vector2>
 							<string> "snap_grid" </string>
 							<bool> False </bool>
 							<string> "snap_offset" </string>
@@ -281,15 +300,34 @@
 				<int> 1 </int>
 				<real> 3 </real>
 				<real> -3 </real>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
 				<real> 640 </real>
 				<real> 360 </real>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<vector2> 0, -50 </vector2>
 				<vector2> 2, 2 </vector2>
 				<resource  external="1">  </resource>
-				<resource  resource_type="SampleLibrary" path="local://1">  </resource>
-				<real> 0 </real>
+				<vector2> 177.325, 183.934 </vector2>
+				<resource  external="2">  </resource>
+				<real> -98 </real>
+				<real> 196 </real>
+				<real> 94 </real>
+				<real> 212 </real>
+				<resource  external="3">  </resource>
+				<string> "¯ PRESS ENTER TO START ®" </string>
 				<real> 1 </real>
 				<int> 0 </int>
-				<resource  external="6">  </resource>
+				<int> -1 </int>
+				<vector2> -180.784, 183.119 </vector2>
+				<resource  resource_type="SampleLibrary" path="local://1">  </resource>
+				<real> 0 </real>
+				<resource  external="8">  </resource>
 				<int> 500 </int>
 				<rect2> 0, 0, 1280, 720 </rect2>
 				<resource name=""></resource>				<real> 40 </real>
@@ -298,7 +336,19 @@
 				<real> 112 </real>
 				<real> 31 </real>
 				<string> "dsalkfalkdsjfa;lsdj" </string>
-				<int> -1 </int>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<vector2> -128, 0 </vector2>
+				<resource  external="9">  </resource>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<vector2> 0, -96 </vector2>
+				<vector2> -128, -96 </vector2>
+				<int> 3 </int>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>
