@@ -10,6 +10,3 @@ func _ready():
 
 func _input(event):
     self.bag.input.handle_event(event)
-
-func _fixed_process(delta):
-    self.bag.processing.process(delta)
