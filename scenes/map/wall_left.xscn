@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="3" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
-	<ext_resource path="res://scenes/player/assets/player.png" type="Texture" index="0"></ext_resource>
-	<resource type="CircleShape2D" path="local://7">
+	<ext_resource path="res://scenes/map/assets/border.png" type="Texture" index="0"></ext_resource>
+	<resource type="RectangleShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
-		<real name="radius"> 10 </real>
+		<vector2 name="extents"> 10, 344.965 </vector2>
 
 	</resource>
 	<main_resource>
@@ -13,65 +13,56 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="46">
-				<string> "player" </string>
-				<string> "KinematicBody2D" </string>
+			<string_array  len="34">
+				<string> "StaticBody2D" </string>
+				<string> "transform/scale" </string>
 				<string> "input/pickable" </string>
 				<string> "shapes/0/shape" </string>
 				<string> "shapes/0/transform" </string>
 				<string> "shapes/0/trigger" </string>
 				<string> "collision/layers" </string>
 				<string> "collision/mask" </string>
-				<string> "collision/margin" </string>
+				<string> "constant_linear_velocity" </string>
+				<string> "constant_angular_velocity" </string>
+				<string> "friction" </string>
+				<string> "bounce" </string>
 				<string> "__meta__" </string>
-				<string> "body" </string>
-				<string> "Sprite" </string>
-				<string> "transform/pos" </string>
-				<string> "transform/scale" </string>
-				<string> "texture" </string>
-				<string> "region_rect" </string>
-				<string> "collision" </string>
 				<string> "CollisionShape2D" </string>
+				<string> "transform/pos" </string>
 				<string> "shape" </string>
 				<string> "trigger" </string>
 				<string> "_update_shape_index" </string>
-				<string> "animations" </string>
-				<string> "AnimationPlayer" </string>
-				<string> "playback/process_mode" </string>
-				<string> "playback/default_blend_time" </string>
-				<string> "root/root" </string>
-				<string> "playback/active" </string>
-				<string> "playback/speed" </string>
-				<string> "blend_times" </string>
-				<string> "autoplay" </string>
-				<string> "Camera2D" </string>
-				<string> "anchor_mode" </string>
-				<string> "rotating" </string>
-				<string> "current" </string>
-				<string> "smoothing" </string>
-				<string> "zoom" </string>
-				<string> "limit/left" </string>
-				<string> "limit/top" </string>
-				<string> "limit/right" </string>
-				<string> "limit/bottom" </string>
-				<string> "drag_margin/h_enabled" </string>
-				<string> "drag_margin/v_enabled" </string>
-				<string> "drag_margin/left" </string>
-				<string> "drag_margin/top" </string>
-				<string> "drag_margin/right" </string>
-				<string> "drag_margin/bottom" </string>
+				<string> "Sprite" </string>
+				<string> "texture" </string>
+				<string> "flip_h" </string>
+				<string> "Sprite1" </string>
+				<string> "Sprite2" </string>
+				<string> "Sprite2 2" </string>
+				<string> "Sprite3" </string>
+				<string> "Sprite23" </string>
+				<string> "Sprite3 2" </string>
+				<string> "Sprite3 3" </string>
+				<string> "Sprite4" </string>
+				<string> "Sprite24" </string>
+				<string> "Sprite33" </string>
+				<string> "Sprite4 2" </string>
+				<string> "Sprite4 3" </string>
+				<string> "Sprite43" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 5 </int>
+			<int> 16 </int>
 			<string> "nodes" </string>
-			<int_array  len="113"> 				-1, -1, 1, 0, -1, 8, 2, 0, 3, 1, 4, 2, 5, 0, 6, 3, 7, 3, 8, 4, 9, 5, 0, 0, 0, 11, 10, -1, 4, 12, 6, 13, 7, 14, 8, 15, 9, 0, 0, 0, 17, 16, -1, 5, 12, 10, 13, 11, 18, 1, 19, 0, 20, 12, 0, 0, 0, 22, 21, -1, 7, 23, 3, 24, 13, 25, 14, 26, 15, 27, 16, 28, 17, 29, 18, 0, 0, 0, 30, 30, -1, 15, 31, 3, 32, 0, 33, 15, 34, 13, 35, 19, 36, 12, 37, 20, 38, 21, 39, 22, 40, 15, 41, 15, 42, 23, 43, 23, 44, 23, 45, 23, 0 </int_array>
+			<int_array  len="230"> 				-1, -1, 0, 0, -1, 12, 1, 0, 2, 1, 3, 2, 4, 3, 5, 1, 6, 4, 7, 4, 8, 5, 9, 6, 10, 7, 11, 6, 12, 8, 0, 0, 0, 13, 13, -1, 5, 14, 9, 1, 10, 15, 2, 16, 1, 17, 11, 0, 0, 0, 18, 18, -1, 3, 14, 12, 19, 13, 20, 14, 0, 0, 0, 18, 21, -1, 3, 14, 15, 19, 13, 20, 14, 0, 0, 0, 18, 22, -1, 3, 14, 16, 19, 13, 20, 14, 0, 0, 0, 18, 23, -1, 3, 14, 17, 19, 13, 20, 14, 0, 0, 0, 18, 24, -1, 3, 14, 18, 19, 13, 20, 14, 0, 0, 0, 18, 25, -1, 3, 14, 19, 19, 13, 20, 14, 0, 0, 0, 18, 26, -1, 3, 14, 20, 19, 13, 20, 14, 0, 0, 0, 18, 27, -1, 3, 14, 21, 19, 13, 20, 14, 0, 0, 0, 18, 28, -1, 3, 14, 22, 19, 13, 20, 14, 0, 0, 0, 18, 29, -1, 3, 14, 23, 19, 13, 20, 14, 0, 0, 0, 18, 30, -1, 3, 14, 24, 19, 13, 20, 14, 0, 0, 0, 18, 31, -1, 3, 14, 25, 19, 13, 20, 14, 0, 0, 0, 18, 32, -1, 3, 14, 26, 19, 13, 20, 14, 0, 0, 0, 18, 33, -1, 3, 14, 27, 19, 13, 20, 14, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="24" shared="false">
+			<array  len="28" shared="false">
+				<vector2> 2, 2 </vector2>
 				<bool> False </bool>
-				<resource  resource_type="Shape2D" path="local://7">  </resource>
-				<matrix32> 1.80673, -0, 0, 3.34937, -0.134909, -32.8913 </matrix32>
+				<resource  resource_type="Shape2D" path="local://1">  </resource>
+				<matrix32> 0.847237, -0, 0, 1.02664, 1.98592, 10.577 </matrix32>
 				<int> 1 </int>
-				<real> 0.08 </real>
+				<vector2> 0, 0 </vector2>
+				<real> 0 </real>
+				<real> 1 </real>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
 					<string> "2D" </string>
@@ -80,7 +71,7 @@
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -130.348, -86.4537 </vector2>
+							<vector2> -746.336, -675.61 </vector2>
 							<string> "snap_grid" </string>
 							<bool> False </bool>
 							<string> "snap_offset" </string>
@@ -100,7 +91,7 @@
 							<string> "snap_step" </string>
 							<vector2> 10, 10 </vector2>
 							<string> "zoom" </string>
-							<real> 3.794777 </real>
+							<real> 0.323534 </real>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
@@ -196,14 +187,8 @@
 						</dictionary>
 						<string> "Anim" </string>
 						<dictionary  shared="false">
-							<string> "animation" </string>
-							<string> "" </string>
-							<string> "editing" </string>
-							<bool> False </bool>
-							<string> "player" </string>
-							<node_path> "animations" </node_path>
 							<string> "visible" </string>
-							<bool> True </bool>
+							<bool> False </bool>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_run_settings__" </string>
@@ -214,25 +199,25 @@
 						<int> 0 </int>
 					</dictionary>
 				</dictionary>
-				<vector2> 0, -31 </vector2>
-				<vector2> 2, 2 </vector2>
-				<resource  external="0">  </resource>
-				<rect2> 13, 3, 38, 40 </rect2>
-				<vector2> -0.134909, -32.8913 </vector2>
-				<vector2> 1.80673, 3.34937 </vector2>
+				<vector2> 1.98592, 10.577 </vector2>
+				<vector2> 0.847237, 1.02664 </vector2>
 				<int> 0 </int>
-				<real> 0 </real>
-				<node_path> ".." </node_path>
+				<vector2> 0, 36 </vector2>
+				<resource  external="0">  </resource>
 				<bool> True </bool>
-				<real> 1 </real>
-				<array  len="0" shared="false">
-				</array>
-				<string> "" </string>
-				<vector2> 1, 1 </vector2>
-				<int> -10000000 </int>
-				<int> 1280 </int>
-				<int> 720 </int>
-				<real> 0.2 </real>
+				<vector2> 0, -15 </vector2>
+				<vector2> 0, -117 </vector2>
+				<vector2> 0, -66 </vector2>
+				<vector2> -0.185486, -219.07 </vector2>
+				<vector2> 0, -270.07 </vector2>
+				<vector2> 0, -168 </vector2>
+				<vector2> 0, -321 </vector2>
+				<vector2> 0, 240 </vector2>
+				<vector2> 0, 189 </vector2>
+				<vector2> 0, 87 </vector2>
+				<vector2> 0, 291 </vector2>
+				<vector2> 0, 138 </vector2>
+				<vector2> 0, 342 </vector2>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>
