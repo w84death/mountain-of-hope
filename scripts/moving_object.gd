@@ -15,6 +15,7 @@ var hat = false
 var stun_duration = 0.15
 var stun_level = 0
 
+var can_jump = true
 var is_in_air = false
 var is_on_wall = false
 var wall_vector = Vector2(0, 0)
@@ -75,11 +76,13 @@ func modify_position(delta):
     if current_motion == Vector2(0, 0) && not self.is_in_air:
         return
 
-    if not self.is_in_air && self.is_jumping:
+    if not self.is_in_air && self.is_jumping && self.can_jump:
         current_motion.y = -self.JUMP_SPEED
 
         if self.is_on_wall:
             current_motion.x = self.wall_vector.x * self.JUMP_SPEED
+            self.can_jump = false
+            self.bag.timers.set_timeout(1, self, 'enable_jump')
 
     current_motion = self.apply_friction(current_motion, delta)
 
@@ -176,3 +179,6 @@ func die():
 func spawn_tombstone():
     var tombstone = self.tombstone_template.instance()
     self.bag.game_state.current_cell.add_persistent_object(tombstone, self.get_pos())
+
+func enable_jump():
+    self.can_jump = true
