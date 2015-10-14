@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="5" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
-	<ext_resource path="res://scenes/map/platform_grass.xscn" type="PackedScene" index="1"></ext_resource>
 	<ext_resource path="res://scenes/map/background.xscn" type="PackedScene" index="0"></ext_resource>
+	<ext_resource path="res://scenes/map/platform_grass.xscn" type="PackedScene" index="1"></ext_resource>
 	<resource type="RectangleShape2D" path="local://3">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2 name="extents"> 10, 33.053 </vector2>
@@ -19,7 +19,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="58">
+			<string_array  len="49">
 				<string> "Map" </string>
 				<string> "Control" </string>
 				<string> "margin/right" </string>
@@ -30,31 +30,20 @@
 				<string> "size_flags/vertical" </string>
 				<string> "__meta__" </string>
 				<string> "background" </string>
-				<string> "Node2D" </string>
+				<string> "ParallaxBackground" </string>
 				<string> "_import_path" </string>
-				<string> "transform/pos" </string>
-				<string> "TileMap" </string>
-				<string> "mode" </string>
-				<string> "tile_set" </string>
-				<string> "cell/size" </string>
-				<string> "cell/quadrant_size" </string>
-				<string> "cell/custom_transform" </string>
-				<string> "cell/half_offset" </string>
-				<string> "cell/tile_origin" </string>
-				<string> "cell/y_sort" </string>
-				<string> "collision/use_kinematic" </string>
-				<string> "collision/friction" </string>
-				<string> "collision/bounce" </string>
-				<string> "collision/layers" </string>
-				<string> "collision/mask" </string>
-				<string> "tile_data" </string>
+				<string> "offset" </string>
+				<string> "scroll/base_scale" </string>
 				<string> "StaticBody2D 2" </string>
 				<string> "StaticBody2D" </string>
+				<string> "transform/pos" </string>
 				<string> "transform/scale" </string>
 				<string> "input/pickable" </string>
 				<string> "shapes/0/shape" </string>
 				<string> "shapes/0/transform" </string>
 				<string> "shapes/0/trigger" </string>
+				<string> "collision/layers" </string>
+				<string> "collision/mask" </string>
 				<string> "constant_linear_velocity" </string>
 				<string> "constant_angular_velocity" </string>
 				<string> "friction" </string>
@@ -78,13 +67,15 @@
 				<string> "platform_grass10" </string>
 				<string> "platform_grass11" </string>
 				<string> "platform_grass12" </string>
+				<string> "platform_grass13" </string>
+				<string> "platform_grass14" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 20 </int>
+			<int> 21 </int>
 			<string> "nodes" </string>
-			<int_array  len="338"> 				-1, -1, 1, 0, -1, 7, 2, 0, 3, 0, 4, 1, 5, 2, 6, 3, 7, 3, 8, 4, 0, 0, 0, 10, 9, 5, 3, 11, 6, 12, 7, 8, 8, 0, 0, 0, 13, 13, -1, 14, 14, 9, 15, 10, 16, 11, 17, 12, 18, 13, 19, 3, 20, 9, 21, 1, 22, 1, 23, 14, 24, 15, 25, 16, 26, 16, 27, 17, 0, 0, 0, 29, 28, -1, 13, 12, 18, 30, 19, 31, 1, 32, 20, 33, 21, 34, 1, 25, 16, 26, 16, 35, 22, 36, 15, 37, 14, 38, 15, 8, 23, 0, 3, 0, 39, 39, -1, 5, 12, 24, 30, 25, 40, 20, 41, 1, 42, 9, 0, 0, 0, 29, 43, -1, 13, 12, 26, 30, 27, 31, 1, 32, 28, 33, 29, 34, 1, 25, 16, 26, 16, 35, 22, 36, 15, 37, 14, 38, 15, 8, 30, 0, 5, 0, 39, 39, -1, 5, 12, 31, 30, 32, 40, 28, 41, 1, 42, 9, 0, 0, 0, 45, 44, 33, 3, 11, 6, 12, 34, 8, 35, 0, 0, 0, 45, 46, 33, 3, 11, 6, 12, 36, 8, 35, 0, 0, 0, 45, 47, 33, 3, 11, 6, 12, 37, 8, 35, 0, 0, 0, 45, 48, 33, 3, 11, 6, 12, 38, 8, 35, 0, 0, 0, 45, 49, 33, 3, 11, 6, 12, 39, 8, 35, 0, 0, 0, 45, 50, 33, 3, 11, 6, 12, 40, 8, 35, 0, 0, 0, 45, 51, 33, 3, 11, 6, 12, 41, 8, 35, 0, 0, 0, 45, 52, 33, 3, 11, 6, 12, 42, 8, 35, 0, 0, 0, 45, 53, 33, 3, 11, 6, 12, 43, 8, 35, 0, 0, 0, 45, 54, 33, 3, 11, 6, 12, 44, 8, 35, 0, 0, 0, 45, 55, 33, 3, 11, 6, 12, 45, 8, 35, 0, 0, 0, 45, 56, 33, 3, 11, 6, 12, 46, 8, 35, 0, 0, 0, 45, 57, 33, 3, 11, 6, 12, 47, 8, 35, 0 </int_array>
+			<int_array  len="331"> 				-1, -1, 1, 0, -1, 7, 2, 0, 3, 0, 4, 1, 5, 2, 6, 3, 7, 3, 8, 4, 0, 0, 0, 10, 9, 5, 4, 11, 6, 12, 7, 13, 8, 8, 9, 0, 0, 0, 15, 14, -1, 13, 16, 10, 17, 11, 18, 1, 19, 12, 20, 13, 21, 1, 22, 14, 23, 14, 24, 15, 25, 16, 26, 17, 27, 16, 8, 18, 0, 2, 0, 28, 28, -1, 5, 16, 19, 17, 20, 29, 12, 30, 1, 31, 21, 0, 0, 0, 15, 32, -1, 13, 16, 22, 17, 23, 18, 1, 19, 24, 20, 25, 21, 1, 22, 14, 23, 14, 24, 15, 25, 16, 26, 17, 27, 16, 8, 26, 0, 4, 0, 28, 28, -1, 5, 16, 27, 17, 28, 29, 24, 30, 1, 31, 21, 0, 0, 0, 34, 33, 29, 3, 11, 6, 16, 30, 8, 31, 0, 0, 0, 34, 35, 29, 3, 11, 6, 16, 32, 8, 31, 0, 0, 0, 34, 36, 29, 3, 11, 6, 16, 33, 8, 31, 0, 0, 0, 34, 37, 29, 3, 11, 6, 16, 34, 8, 31, 0, 0, 0, 34, 38, 29, 3, 11, 6, 16, 35, 8, 31, 0, 0, 0, 34, 39, 29, 3, 11, 6, 16, 36, 8, 31, 0, 0, 0, 34, 40, 29, 3, 11, 6, 16, 37, 8, 31, 0, 0, 0, 34, 41, 29, 3, 11, 6, 16, 38, 8, 31, 0, 0, 0, 34, 42, 29, 3, 11, 6, 16, 39, 8, 31, 0, 0, 0, 34, 43, 29, 3, 11, 6, 16, 40, 8, 31, 0, 0, 0, 34, 44, 29, 3, 11, 6, 16, 41, 8, 31, 0, 0, 0, 34, 45, 29, 3, 11, 6, 16, 42, 8, 31, 0, 0, 0, 34, 46, 29, 3, 11, 6, 16, 43, 8, 31, 0, 0, 0, 34, 47, 29, 3, 11, 6, 16, 44, 8, 31, 0, 0, 0, 34, 48, 29, 3, 11, 6, 16, 45, 8, 31, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="48" shared="false">
+			<array  len="46" shared="false">
 				<real> 40 </real>
 				<bool> False </bool>
 				<bool> True </bool>
@@ -97,7 +88,7 @@
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -396.096, -877.215 </vector2>
+							<vector2> -930.098, -951.314 </vector2>
 							<string> "snap_grid" </string>
 							<bool> True </bool>
 							<string> "snap_offset" </string>
@@ -227,7 +218,8 @@
 				</dictionary>
 				<resource  external="0">  </resource>
 				<node_path> "" </node_path>
-				<vector2> -368, -288 </vector2>
+				<vector2> 0, -320 </vector2>
+				<vector2> 0, 0.7 </vector2>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
 					<string> "2D" </string>
@@ -363,26 +355,26 @@
 						<string> "run_mode" </string>
 						<int> 0 </int>
 					</dictionary>
+					<string> "__editor_show_subtree" </string>
+					<bool> True </bool>
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
 				</dictionary>
-				<int> 0 </int>
-				<resource name=""></resource>				<vector2> 32, 32 </vector2>
-				<int> 16 </int>
-				<matrix32> 1, 0, 0, 1, 0, 0 </matrix32>
-				<real> 1 </real>
-				<real> 0 </real>
-				<int> 1 </int>
-				<int_array  len="0"> 					 </int_array>
 				<vector2> 1249.17, 360.012 </vector2>
 				<vector2> 1, 11.1516 </vector2>
 				<resource  resource_type="Shape2D" path="local://3">  </resource>
 				<matrix32> 1, -0, 0, 1.59887, 14.8049, -21.7569 </matrix32>
+				<int> 1 </int>
 				<vector2> 0, 0 </vector2>
+				<real> 0 </real>
+				<real> 1 </real>
 				<dictionary  shared="false">
 					<string> "_editor_collapsed" </string>
 					<bool> True </bool>
 				</dictionary>
 				<vector2> 14.8049, -21.7569 </vector2>
 				<vector2> 1, 1.59887 </vector2>
+				<int> 0 </int>
 				<vector2> 31.4604, 359.086 </vector2>
 				<vector2> 1, 11.1805 </vector2>
 				<resource  resource_type="Shape2D" path="local://4">  </resource>
@@ -541,8 +533,10 @@
 				<vector2> 1153.3, 701.627 </vector2>
 				<vector2> 908.716, 154.543 </vector2>
 				<vector2> 346.177, 46.363 </vector2>
-				<vector2> 970.533, -151.453 </vector2>
-				<vector2> 503.812, -312.178 </vector2>
+				<vector2> 852, -38 </vector2>
+				<vector2> 532, -198 </vector2>
+				<vector2> 772, -388 </vector2>
+				<vector2> 532, -568 </vector2>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>
