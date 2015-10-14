@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<<<<<<< HEAD
+<resource_file type="PackedScene" subresource_count="14" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
+	<ext_resource path="res://scenes/hud/assets/dos437-16.fnt" type="Font" index="3"></ext_resource>
+	<ext_resource path="res://scenes/hud/assets/logo.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://scenes/player/assets/hit.wav" type="Sample" index="7"></ext_resource>
+	<ext_resource path="res://scenes/dance.ogg" type="AudioStream" index="8"></ext_resource>
+	<ext_resource path="res://scripts/main.gd" type="Script" index="0"></ext_resource>
+	<ext_resource path="res://scenes/player/assets/die.wav" type="Sample" index="6"></ext_resource>
+	<ext_resource path="res://scenes/player/assets/attack_left.wav" type="Sample" index="4"></ext_resource>
+	<ext_resource path="res://scenes/hud/assets/corner.png" type="Texture" index="11"></ext_resource>
+	<ext_resource path="res://scenes/hud/assets/goral.png" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://scenes/player/assets/attack_right.wav" type="Sample" index="5"></ext_resource>
+	<ext_resource path="res://scenes/map/background.xscn" type="PackedScene" index="9"></ext_resource>
+	<ext_resource path="res://scenes/hud/hud.xscn" type="PackedScene" index="10"></ext_resource>
+	<resource type="SampleLibrary" path="local://1">
+		<dictionary name="samples/player_attack2" shared="false">
+=======
 <resource_file type="PackedScene" subresource_count="18" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
 	<ext_resource path="res://scenes/map/background.xscn" type="PackedScene" index="9"></ext_resource>
 	<ext_resource path="res://scenes/shaders/vigette.png" type="Texture" index="12"></ext_resource>
@@ -16,12 +33,17 @@
 	<ext_resource path="res://scenes/shaders/snow2.png" type="Texture" index="11"></ext_resource>
 	<resource type="SampleLibrary" path="local://1">
 		<dictionary name="samples/player_attack1" shared="false">
+>>>>>>> fix shader
 			<string> "db" </string>
 			<real> 0 </real>
 			<string> "pitch" </string>
 			<real> 1 </real>
 			<string> "sample" </string>
+<<<<<<< HEAD
+			<resource  external="5">  </resource>
+=======
 			<resource  external="4">  </resource>
+>>>>>>> fix shader
 		</dictionary>
 		<dictionary name="samples/game_over" shared="false">
 			<string> "db" </string>
@@ -46,6 +68,9 @@
 			<string> "sample" </string>
 			<resource  external="6">  </resource>
 		</dictionary>
+<<<<<<< HEAD
+		<dictionary name="samples/player_hit" shared="false">
+=======
 		<dictionary name="samples/you_can" shared="false">
 			<string> "db" </string>
 			<real> 0 </real>
@@ -54,42 +79,22 @@
 			<string> "sample" </string>
 			<resource name=""></resource>		</dictionary>
 		<dictionary name="samples/player_attack2" shared="false">
+>>>>>>> fix shader
 			<string> "db" </string>
 			<real> 0 </real>
 			<string> "pitch" </string>
 			<real> 1 </real>
 			<string> "sample" </string>
-			<resource  external="5">  </resource>
+			<resource  external="7">  </resource>
 		</dictionary>
-
-	</resource>
-	<resource type="CanvasItemShader" path="local://23">
-		<dictionary name="_code" shared="false">
-			<string> "fragment" </string>
-			<string> "uniform color base=color(0.6,0.6,0.6,0.1);&#000a;uniform texture grain;&#000a;uniform float grain_strength=0.8;&#000a;uniform texture vignette;&#000a;uniform float fps=4;&#000a;uniform float stretch = 0.1;&#000a;uniform float flashing=0.01;&#000a;&#000a;vec3 c = texscreen(SCREEN_UV);&#000a;&#000a;//float v = max(c.r,max(c.g,c.b));&#000a;float v = dot(c,vec3(0.60,0.60,0.60));&#000a;v=sqrt(v);&#000a;//v*=v;&#000a;float make_grain(float time) {&#000a;&#000a;&#0009;//vec2 ofs = vec2( sin(4 * time * sin(time*100)) , -abs(sin(2*time*sin(time*300))) );&#000a;&#0009;vec2 ofs = vec2( sin(4 * time * sin(time*100)) , -0.1);&#000a;&#0009;return tex(grain,(UV + ofs) * stretch).r;&#000a;}&#000a;&#000a;float f = 1.0/fps;&#000a;float g = make_grain(TIME-mod(TIME,f));&#000a;g=max(g,make_grain(TIME-mod(TIME,f)+f)*0.5);&#000a;g=max(g,make_grain(TIME-mod(TIME,f)+f*2.0)*0.25);&#000a;&#000a;&#000a;COLOR.rgb= c.rgb + vec3(g)*grain_strength;&#000a;COLOR.rgb*= tex(vignette,UV).r;&#000a;float ft = TIME * 0.002;&#000a;//COLOR.rgb+=vec3(sin(75*ft*sin(ft*123)))*flashing;&#000a;" </string>
-			<string> "fragment_ofs" </string>
-			<int> 0 </int>
-			<string> "light" </string>
-			<string> "" </string>
-			<string> "light_ofs" </string>
-			<int> 0 </int>
-			<string> "vertex" </string>
-			<string> "" </string>
-			<string> "vertex_ofs" </string>
-			<int> 0 </int>
+		<dictionary name="samples/player_attack1" shared="false">
+			<string> "db" </string>
+			<real> 0 </real>
+			<string> "pitch" </string>
+			<real> 1 </real>
+			<string> "sample" </string>
+			<resource  external="4">  </resource>
 		</dictionary>
-
-	</resource>
-	<resource type="CanvasItemMaterial" path="local://24">
-		<resource name="shader/shader" resource_type="Shader" path="local://23">  </resource>
-		<int name="shader/shading_mode"> 0 </int>
-		<color name="shader_param/base"> 0.39048, 0.435342, 0.405715, 1 </color>
-		<resource name="shader_param/grain" external="11">  </resource>
-		<real name="shader_param/grain_strength"> 0.3 </real>
-		<resource name="shader_param/vignette" external="12">  </resource>
-		<real name="shader_param/fps"> 12 </real>
-		<real name="shader_param/stretch"> 0.5 </real>
-		<real name="shader_param/flashing"> 0.01 </real>
 
 	</resource>
 	<main_resource>
@@ -99,7 +104,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="89">
+			<string_array  len="85">
 				<string> "root" </string>
 				<string> "Control" </string>
 				<string> "margin/right" </string>
@@ -174,6 +179,7 @@
 				<string> "background" </string>
 				<string> "ParallaxBackground" </string>
 				<string> "_import_path" </string>
+				<string> "hud" </string>
 				<string> "corner" </string>
 				<string> "anchor/left" </string>
 				<string> "centered" </string>
@@ -184,18 +190,27 @@
 				<string> "corner2" </string>
 				<string> "anchor/top" </string>
 				<string> "corner3" </string>
+<<<<<<< HEAD
+=======
 				<string> "shader" </string>
 				<string> "TextureFrame" </string>
 				<string> "visibility/blend_mode" </string>
 				<string> "material/material" </string>
 				<string> "expand" </string>
+>>>>>>> fix shader
 			</string_array>
 			<string> "node_count" </string>
-			<int> 22 </int>
+			<int> 21 </int>
 			<string> "nodes" </string>
+<<<<<<< HEAD
+			<int_array  len="443"> 				-1, -1, 1, 0, -1, 8, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 4, 8, 5, 9, 6, 0, 0, 0, 11, 10, -1, 9, 12, 7, 13, 7, 14, 8, 2, 9, 4, 2, 5, 3, 6, 4, 7, 4, 15, 2, 0, 1, 0, 1, 16, -1, 9, 14, 10, 17, 11, 2, 10, 3, 11, 4, 2, 5, 3, 6, 4, 7, 4, 9, 12, 0, 2, 0, 18, 10, -1, 3, 19, 13, 20, 14, 21, 15, 0, 2, 0, 18, 22, -1, 3, 19, 16, 20, 14, 21, 17, 0, 2, 0, 24, 23, -1, 12, 14, 18, 17, 19, 2, 20, 3, 21, 4, 3, 5, 3, 6, 4, 25, 22, 26, 23, 27, 24, 28, 25, 29, 26, 0, 2, 0, 18, 30, -1, 4, 19, 27, 20, 14, 21, 17, 31, 3, 0, 0, 0, 32, 32, -1, 14, 33, 7, 34, 28, 35, 29, 36, 24, 37, 29, 38, 29, 39, 29, 40, 25, 41, 29, 42, 29, 43, 29, 44, 4, 45, 29, 46, 29, 0, 0, 0, 47, 47, -1, 8, 48, 30, 49, 3, 50, 3, 51, 29, 52, 3, 53, 2, 54, 29, 55, 31, 0, 0, 0, 56, 56, -1, 14, 57, 32, 58, 2, 59, 33, 60, 2, 61, 2, 62, 2, 63, 3, 64, 2, 65, 2, 66, 4, 67, 2, 68, 2, 69, 2, 9, 34, 0, 9, 0, 1, 70, -1, 6, 2, 35, 3, 35, 4, 2, 5, 3, 6, 4, 7, 4, 0, 0, 0, 72, 71, 36, 2, 73, 37, 9, 38, 0, 0, 0, 1, 74, 39, 2, 73, 37, 9, 40, 0, 0, 0, 1, 75, -1, 7, 76, 7, 12, 7, 4, 2, 5, 3, 6, 4, 7, 4, 9, 41, 0, 13, 0, 18, 18, -1, 7, 19, 42, 20, 14, 21, 43, 77, 2, 78, 4, 79, 4, 80, 7, 0, 0, 0, 1, 81, -1, 5, 4, 2, 5, 3, 6, 4, 7, 4, 9, 44, 0, 15, 0, 18, 18, -1, 5, 20, 14, 21, 43, 77, 2, 78, 4, 79, 4, 0, 0, 0, 1, 82, -1, 7, 83, 7, 13, 7, 4, 2, 5, 3, 6, 4, 7, 4, 9, 45, 0, 17, 0, 18, 18, -1, 7, 19, 46, 20, 14, 21, 43, 77, 2, 78, 4, 79, 4, 80, 4, 0, 0, 0, 1, 84, -1, 9, 76, 7, 83, 7, 12, 7, 13, 7, 4, 2, 5, 3, 6, 4, 7, 4, 9, 47, 0, 19, 0, 18, 18, -1, 7, 19, 48, 20, 14, 21, 43, 77, 2, 78, 4, 79, 4, 80, 49, 0 </int_array>
+			<string> "variants" </string>
+			<array  len="50" shared="false">
+=======
 			<int_array  len="492"> 				-1, -1, 1, 0, -1, 8, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 4, 8, 5, 9, 6, 0, 0, 0, 11, 10, -1, 9, 12, 7, 13, 7, 14, 8, 2, 9, 4, 2, 5, 3, 6, 4, 7, 4, 15, 2, 0, 1, 0, 1, 16, -1, 9, 14, 10, 17, 11, 2, 10, 3, 11, 4, 2, 5, 3, 6, 4, 7, 4, 9, 12, 0, 2, 0, 18, 10, -1, 3, 19, 13, 20, 14, 21, 15, 0, 2, 0, 18, 22, -1, 3, 19, 16, 20, 14, 21, 17, 0, 2, 0, 24, 23, -1, 12, 14, 18, 17, 19, 2, 20, 3, 21, 4, 3, 5, 3, 6, 4, 25, 22, 26, 23, 27, 24, 28, 25, 29, 26, 0, 2, 0, 18, 30, -1, 4, 19, 27, 20, 14, 21, 17, 31, 3, 0, 0, 0, 32, 32, -1, 14, 33, 7, 34, 28, 35, 29, 36, 24, 37, 29, 38, 29, 39, 29, 40, 25, 41, 29, 42, 29, 43, 29, 44, 4, 45, 29, 46, 29, 0, 0, 0, 47, 47, -1, 8, 48, 30, 49, 3, 50, 3, 51, 29, 52, 3, 53, 2, 54, 29, 55, 31, 0, 0, 0, 56, 56, -1, 14, 57, 32, 58, 2, 59, 33, 60, 2, 61, 2, 62, 2, 63, 3, 64, 2, 65, 2, 66, 4, 67, 2, 68, 2, 69, 2, 9, 34, 0, 9, 0, 1, 70, -1, 6, 2, 35, 3, 35, 4, 2, 5, 3, 6, 4, 7, 4, 0, 0, 0, 72, 71, 36, 2, 73, 37, 9, 38, 0, 0, 0, 24, 24, -1, 11, 14, 39, 17, 40, 2, 41, 3, 42, 4, 3, 5, 3, 6, 4, 26, 43, 27, 24, 28, 25, 29, 26, 0, 0, 0, 1, 74, -1, 7, 75, 7, 12, 7, 4, 2, 5, 3, 6, 4, 7, 4, 9, 44, 0, 13, 0, 18, 18, -1, 7, 19, 45, 20, 14, 21, 46, 76, 2, 77, 4, 78, 4, 79, 7, 0, 0, 0, 1, 80, -1, 5, 4, 2, 5, 3, 6, 4, 7, 4, 9, 47, 0, 15, 0, 18, 18, -1, 5, 20, 14, 21, 46, 76, 2, 77, 4, 78, 4, 0, 0, 0, 1, 81, -1, 7, 82, 7, 13, 7, 4, 2, 5, 3, 6, 4, 7, 4, 9, 48, 0, 17, 0, 18, 18, -1, 7, 19, 49, 20, 14, 21, 46, 76, 2, 77, 4, 78, 4, 79, 4, 0, 0, 0, 1, 83, -1, 9, 75, 7, 82, 7, 12, 7, 13, 7, 4, 2, 5, 3, 6, 4, 7, 4, 9, 50, 0, 19, 0, 18, 18, -1, 7, 19, 51, 20, 14, 21, 46, 76, 2, 77, 4, 78, 4, 79, 52, 0, 0, 0, 85, 84, -1, 12, 86, 7, 87, 53, 12, 7, 13, 7, 14, 9, 2, 54, 4, 3, 5, 3, 6, 4, 7, 4, 21, 55, 88, 3, 0 </int_array>
 			<string> "variants" </string>
 			<array  len="56" shared="false">
+>>>>>>> fix shader
 				<real> 1280 </real>
 				<real> 720 </real>
 				<bool> False </bool>
@@ -210,7 +225,11 @@
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
+<<<<<<< HEAD
+							<vector2> -326.519, -609.378 </vector2>
+=======
 							<vector2> -524.829, -276.438 </vector2>
+>>>>>>> fix shader
 							<string> "snap_grid" </string>
 							<bool> False </bool>
 							<string> "snap_offset" </string>
@@ -510,17 +529,149 @@
 						<int> 0 </int>
 					</dictionary>
 				</dictionary>
-				<real> 9 </real>
-				<real> 18 </real>
-				<real> 112 </real>
-				<real> 31 </real>
-				<string> "dsalkfalkdsjfa;lsdj" </string>
+				<resource  external="10">  </resource>
+				<dictionary  shared="false">
+					<string> "__editor_plugin_screen__" </string>
+					<string> "2D" </string>
+					<string> "__editor_plugin_states__" </string>
+					<dictionary  shared="false">
+						<string> "2D" </string>
+						<dictionary  shared="false">
+							<string> "ofs" </string>
+							<vector2> -119.524, -103.382 </vector2>
+							<string> "snap_grid" </string>
+							<bool> True </bool>
+							<string> "snap_offset" </string>
+							<vector2> 0, 0 </vector2>
+							<string> "snap_pixel" </string>
+							<bool> False </bool>
+							<string> "snap_relative" </string>
+							<bool> False </bool>
+							<string> "snap_rotation" </string>
+							<bool> False </bool>
+							<string> "snap_rotation_offset" </string>
+							<real> 0 </real>
+							<string> "snap_rotation_step" </string>
+							<real> 0.261799 </real>
+							<string> "snap_show_grid" </string>
+							<bool> False </bool>
+							<string> "snap_step" </string>
+							<vector2> 10, 10 </vector2>
+							<string> "zoom" </string>
+							<real> 0.902501 </real>
+						</dictionary>
+						<string> "3D" </string>
+						<dictionary  shared="false">
+							<string> "ambient_light_color" </string>
+							<color> 0.15, 0.15, 0.15, 1 </color>
+							<string> "default_light" </string>
+							<bool> True </bool>
+							<string> "default_srgb" </string>
+							<bool> False </bool>
+							<string> "deflight_rot_x" </string>
+							<real> 0.942478 </real>
+							<string> "deflight_rot_y" </string>
+							<real> 0.628319 </real>
+							<string> "fov" </string>
+							<real> 45 </real>
+							<string> "show_grid" </string>
+							<bool> True </bool>
+							<string> "show_origin" </string>
+							<bool> True </bool>
+							<string> "viewport_mode" </string>
+							<int> 1 </int>
+							<string> "viewports" </string>
+							<array  len="4" shared="false">
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> True </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+							</array>
+							<string> "zfar" </string>
+							<real> 500 </real>
+							<string> "znear" </string>
+							<real> 0.1 </real>
+						</dictionary>
+						<string> "Anim" </string>
+						<dictionary  shared="false">
+							<string> "visible" </string>
+							<bool> False </bool>
+						</dictionary>
+					</dictionary>
+					<string> "__editor_run_settings__" </string>
+					<dictionary  shared="false">
+						<string> "custom_args" </string>
+						<string> "-l $scene" </string>
+						<string> "run_mode" </string>
+						<int> 0 </int>
+					</dictionary>
+				</dictionary>
 				<dictionary  shared="false">
 					<string> "_editor_collapsed" </string>
 					<bool> True </bool>
 				</dictionary>
 				<vector2> -128, 0 </vector2>
-				<resource  external="10">  </resource>
+				<resource  external="11">  </resource>
 				<dictionary  shared="false">
 					<string> "_editor_collapsed" </string>
 					<bool> True </bool>
@@ -536,9 +687,12 @@
 				</dictionary>
 				<vector2> -128, -96 </vector2>
 				<int> 3 </int>
+<<<<<<< HEAD
+=======
 				<resource  resource_type="CanvasItemMaterial" path="local://24">  </resource>
 				<real> -17 </real>
 				<resource  external="13">  </resource>
+>>>>>>> fix shader
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>
