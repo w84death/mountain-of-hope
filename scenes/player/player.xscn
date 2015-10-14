@@ -6,11 +6,30 @@
 		<real name="radius"> 10 </real>
 
 	</resource>
-	<resource type="Animation" path="local://8">
+	<resource type="Animation" path="local://10">
 		<string name="resource/name"> "idle" </string>
-		<real name="length"> 1 </real>
-		<bool name="loop"> False </bool>
+		<real name="length"> 1.8 </real>
+		<bool name="loop"> True </bool>
 		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "body:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> False </bool>
+			<string> "times" </string>
+			<real_array  len="5"> 				0, 0.2, 0.4, 0.6, 0.8 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="5"> 				1, 1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="5" shared="false">
+				<int> 3 </int>
+				<int> 4 </int>
+				<int> 3 </int>
+				<int> 4 </int>
+				<int> 5 </int>
+			</array>
+		</dictionary>
 
 	</resource>
 	<resource type="Animation" path="local://9">
@@ -45,7 +64,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="50">
+			<string_array  len="51">
 				<string> "player" </string>
 				<string> "KinematicBody2D" </string>
 				<string> "z/z" </string>
@@ -63,6 +82,7 @@
 				<string> "transform/scale" </string>
 				<string> "texture" </string>
 				<string> "hframes" </string>
+				<string> "frame" </string>
 				<string> "region_rect" </string>
 				<string> "collision" </string>
 				<string> "CollisionShape2D" </string>
@@ -100,9 +120,9 @@
 			<string> "node_count" </string>
 			<int> 5 </int>
 			<string> "nodes" </string>
-			<int_array  len="121"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 3, 6, 1, 7, 4, 8, 4, 9, 5, 10, 6, 0, 0, 0, 12, 11, -1, 5, 13, 7, 14, 8, 15, 9, 16, 10, 17, 11, 0, 0, 0, 19, 18, -1, 5, 13, 12, 14, 13, 20, 2, 21, 1, 22, 14, 0, 0, 0, 24, 23, -1, 9, 25, 4, 26, 15, 27, 16, 28, 17, 29, 18, 30, 19, 31, 20, 32, 21, 33, 22, 0, 0, 0, 34, 34, -1, 15, 35, 4, 36, 1, 37, 19, 38, 15, 39, 23, 40, 14, 41, 24, 42, 25, 43, 14, 44, 19, 45, 19, 46, 26, 47, 26, 48, 26, 49, 26, 0 </int_array>
+			<int_array  len="123"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 3, 6, 1, 7, 4, 8, 4, 9, 5, 10, 6, 0, 0, 0, 12, 11, -1, 6, 13, 7, 14, 8, 15, 9, 16, 10, 17, 11, 18, 12, 0, 0, 0, 20, 19, -1, 5, 13, 13, 14, 14, 21, 2, 22, 1, 23, 15, 0, 0, 0, 25, 24, -1, 9, 26, 4, 27, 16, 28, 17, 29, 18, 30, 19, 31, 20, 32, 21, 33, 22, 34, 23, 0, 0, 0, 35, 35, -1, 15, 36, 4, 37, 1, 38, 20, 39, 16, 40, 24, 41, 15, 42, 25, 43, 26, 44, 15, 45, 20, 46, 20, 47, 27, 48, 27, 49, 27, 50, 27, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="27" shared="false">
+			<array  len="28" shared="false">
 				<int> 100 </int>
 				<bool> False </bool>
 				<resource  resource_type="Shape2D" path="local://7">  </resource>
@@ -234,7 +254,7 @@
 						<string> "Anim" </string>
 						<dictionary  shared="false">
 							<string> "animation" </string>
-							<string> "run" </string>
+							<string> "idle" </string>
 							<string> "editing" </string>
 							<bool> True </bool>
 							<string> "player" </string>
@@ -251,17 +271,18 @@
 						<int> 0 </int>
 					</dictionary>
 				</dictionary>
-				<vector2> -5, -31 </vector2>
+				<vector2> -4, -31 </vector2>
 				<vector2> 2, 2 </vector2>
 				<resource  external="0">  </resource>
-				<int> 3 </int>
+				<int> 6 </int>
+				<int> 5 </int>
 				<rect2> 13, 3, 38, 40 </rect2>
 				<vector2> -0.0914183, -34.9321 </vector2>
 				<vector2> 1.91143, 3.00995 </vector2>
 				<int> 0 </int>
 				<real> 0 </real>
 				<node_path> ".." </node_path>
-				<resource  resource_type="Animation" path="local://8">  </resource>
+				<resource  resource_type="Animation" path="local://10">  </resource>
 				<resource  resource_type="Animation" path="local://9">  </resource>
 				<bool> True </bool>
 				<real> 1 </real>
