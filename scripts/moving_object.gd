@@ -81,6 +81,8 @@ func modify_position(delta):
         if self.is_on_wall:
             current_motion.x = self.wall_vector.x * self.JUMP_SPEED
 
+    current_motion = self.apply_friction(current_motion, delta)
+
     self.avatar.move(current_motion)
     if (self.avatar.is_colliding()):
         var normal = self.avatar.get_collision_normal()
@@ -89,14 +91,6 @@ func modify_position(delta):
             self.wall_vector = normal
         else:
             self.is_on_wall = false
-
-        if abs(current_motion.x) < self.FLOOR_FRICTION * delta:
-            current_motion.x = 0
-        else:
-            if current_motion.x > 0:
-                current_motion.x = current_motion.x - self.FLOOR_FRICTION * delta
-            else:
-                current_motion.x = current_motion.x + self.FLOOR_FRICTION * delta
 
         var n = self.avatar.get_collision_normal()
         current_motion = n.slide(current_motion)
@@ -114,6 +108,17 @@ func modify_position(delta):
 
 func handle_collision(collider):
     return
+
+func apply_friction(current_motion, delta):
+    if abs(current_motion.x) < self.FLOOR_FRICTION * delta:
+        current_motion.x = 0
+    else:
+        if current_motion.x > 0:
+            current_motion.x = current_motion.x - self.FLOOR_FRICTION * delta
+        else:
+            current_motion.x = current_motion.x + self.FLOOR_FRICTION * delta
+
+    return current_motion
 
 func apply_axis_threshold(axis_value):
     if abs(axis_value) < self.AXIS_THRESHOLD:
