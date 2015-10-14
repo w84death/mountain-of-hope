@@ -43,13 +43,13 @@
 			<array  len="25" shared="false">
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> 765.329, -300.882 </vector2>
+							<vector2> -132.178, -324.151 </vector2>
 							<string> "snap_grid" </string>
 							<bool> False </bool>
 							<string> "snap_offset" </string>
@@ -320,7 +320,7 @@
 				<vector2> 842.244, 32 </vector2>
 				<vector2> 1114.12, 32 </vector2>
 				<resource  external="1">  </resource>
-				<vector2> 110, -18 </vector2>
+				<vector2> 319.418, -19.108 </vector2>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
 					<string> "2D" </string>
@@ -457,8 +457,8 @@
 						<int> 0 </int>
 					</dictionary>
 				</dictionary>
-				<vector2> 160, -18 </vector2>
-				<vector2> 200, -18 </vector2>
+				<vector2> 369.418, -19.108 </vector2>
+				<vector2> 409.418, -19.108 </vector2>
 				<vector2> 280, -18 </vector2>
 				<vector2> 350, -18 </vector2>
 				<vector2> 460, -18 </vector2>
@@ -468,9 +468,9 @@
 				<vector2> 740, -18 </vector2>
 				<vector2> 910, -18 </vector2>
 				<vector2> 1020, -18 </vector2>
-				<vector2> 1120, -18 </vector2>
-				<vector2> 1170, -18 </vector2>
-				<vector2> 1210, -18 </vector2>
+				<vector2> 881.773, -18 </vector2>
+				<vector2> 931.773, -18 </vector2>
+				<vector2> 971.773, -18 </vector2>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>

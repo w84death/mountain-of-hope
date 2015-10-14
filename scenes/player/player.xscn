@@ -13,9 +13,10 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="46">
+			<string_array  len="47">
 				<string> "player" </string>
 				<string> "KinematicBody2D" </string>
+				<string> "z/z" </string>
 				<string> "input/pickable" </string>
 				<string> "shapes/0/shape" </string>
 				<string> "shapes/0/transform" </string>
@@ -64,12 +65,13 @@
 			<string> "node_count" </string>
 			<int> 5 </int>
 			<string> "nodes" </string>
-			<int_array  len="113"> 				-1, -1, 1, 0, -1, 8, 2, 0, 3, 1, 4, 2, 5, 0, 6, 3, 7, 3, 8, 4, 9, 5, 0, 0, 0, 11, 10, -1, 4, 12, 6, 13, 7, 14, 8, 15, 9, 0, 0, 0, 17, 16, -1, 5, 12, 10, 13, 11, 18, 1, 19, 0, 20, 12, 0, 0, 0, 22, 21, -1, 7, 23, 3, 24, 13, 25, 14, 26, 15, 27, 16, 28, 17, 29, 18, 0, 0, 0, 30, 30, -1, 15, 31, 3, 32, 0, 33, 15, 34, 13, 35, 19, 36, 12, 37, 20, 38, 21, 39, 12, 40, 15, 41, 15, 42, 22, 43, 22, 44, 22, 45, 22, 0 </int_array>
+			<int_array  len="115"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 3, 6, 1, 7, 4, 8, 4, 9, 5, 10, 6, 0, 0, 0, 12, 11, -1, 4, 13, 7, 14, 8, 15, 9, 16, 10, 0, 0, 0, 18, 17, -1, 5, 13, 11, 14, 12, 19, 2, 20, 1, 21, 13, 0, 0, 0, 23, 22, -1, 7, 24, 4, 25, 14, 26, 15, 27, 16, 28, 17, 29, 18, 30, 19, 0, 0, 0, 31, 31, -1, 15, 32, 4, 33, 1, 34, 16, 35, 14, 36, 20, 37, 13, 38, 21, 39, 22, 40, 13, 41, 16, 42, 16, 43, 23, 44, 23, 45, 23, 46, 23, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="23" shared="false">
+			<array  len="24" shared="false">
+				<int> 100 </int>
 				<bool> False </bool>
 				<resource  resource_type="Shape2D" path="local://7">  </resource>
-				<matrix32> 3.26288, -0, 0, 3.34937, 1.22618, -31.8372 </matrix32>
+				<matrix32> 1.91143, -0, 0, 3.34937, 1.22618, -31.8372 </matrix32>
 				<int> 1 </int>
 				<real> 0.08 </real>
 				<dictionary  shared="false">
@@ -219,7 +221,7 @@
 				<resource  external="0">  </resource>
 				<rect2> 13, 3, 38, 40 </rect2>
 				<vector2> 1.22618, -31.8372 </vector2>
-				<vector2> 3.26288, 3.34937 </vector2>
+				<vector2> 1.91143, 3.34937 </vector2>
 				<int> 0 </int>
 				<real> 0 </real>
 				<node_path> ".." </node_path>
