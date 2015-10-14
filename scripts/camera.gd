@@ -2,7 +2,6 @@
 var bag
 var camera
 
-var zoom
 
 var shakes = 0
 var shakes_max = 3
@@ -14,7 +13,6 @@ var shake_initial_position
 func _init_bag(bag):
     self.bag = bag
     self.camera = self.bag.root.camera
-    self.zoom = self.camera.get_zoom()
 
 func shake():
     self.shakes = 0

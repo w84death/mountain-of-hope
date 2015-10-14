@@ -123,7 +123,7 @@ func attack():
     if not self.animations.get_current_animation() == 'attack1' and not self.animations.get_current_animation() == 'attack2' :
         self.animations.play(random_attack)
         self.play_sound(random_attack)
-        self.blast.play('blast')
+        #self.blast.play('blast')
     elif not self.animations.is_playing():
         if self.animations.get_current_animation() == 'attack1':
             self.animations.play('attack2')

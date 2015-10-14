@@ -13,7 +13,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="30">
+			<string_array  len="46">
 				<string> "player" </string>
 				<string> "KinematicBody2D" </string>
 				<string> "input/pickable" </string>
@@ -44,13 +44,29 @@
 				<string> "playback/speed" </string>
 				<string> "blend_times" </string>
 				<string> "autoplay" </string>
+				<string> "Camera2D" </string>
+				<string> "anchor_mode" </string>
+				<string> "rotating" </string>
+				<string> "current" </string>
+				<string> "smoothing" </string>
+				<string> "zoom" </string>
+				<string> "limit/left" </string>
+				<string> "limit/top" </string>
+				<string> "limit/right" </string>
+				<string> "limit/bottom" </string>
+				<string> "drag_margin/h_enabled" </string>
+				<string> "drag_margin/v_enabled" </string>
+				<string> "drag_margin/left" </string>
+				<string> "drag_margin/top" </string>
+				<string> "drag_margin/right" </string>
+				<string> "drag_margin/bottom" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 4 </int>
+			<int> 5 </int>
 			<string> "nodes" </string>
-			<int_array  len="76"> 				-1, -1, 1, 0, -1, 8, 2, 0, 3, 1, 4, 2, 5, 0, 6, 3, 7, 3, 8, 4, 9, 5, 0, 0, 0, 11, 10, -1, 4, 12, 6, 13, 7, 14, 8, 15, 9, 0, 0, 0, 17, 16, -1, 5, 12, 10, 13, 11, 18, 1, 19, 0, 20, 12, 0, 0, 0, 22, 21, -1, 7, 23, 3, 24, 13, 25, 14, 26, 15, 27, 16, 28, 17, 29, 18, 0 </int_array>
+			<int_array  len="113"> 				-1, -1, 1, 0, -1, 8, 2, 0, 3, 1, 4, 2, 5, 0, 6, 3, 7, 3, 8, 4, 9, 5, 0, 0, 0, 11, 10, -1, 4, 12, 6, 13, 7, 14, 8, 15, 9, 0, 0, 0, 17, 16, -1, 5, 12, 10, 13, 11, 18, 1, 19, 0, 20, 12, 0, 0, 0, 22, 21, -1, 7, 23, 3, 24, 13, 25, 14, 26, 15, 27, 16, 28, 17, 29, 18, 0, 0, 0, 30, 30, -1, 15, 31, 3, 32, 0, 33, 15, 34, 13, 35, 19, 36, 20, 37, 20, 38, 21, 39, 21, 40, 15, 41, 15, 42, 22, 43, 22, 44, 22, 45, 22, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="19" shared="false">
+			<array  len="23" shared="false">
 				<bool> False </bool>
 				<resource  resource_type="Shape2D" path="local://7">  </resource>
 				<matrix32> 3.26288, -0, 0, 3.34937, 1.22618, -31.8372 </matrix32>
@@ -58,7 +74,7 @@
 				<real> 0.08 </real>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -212,6 +228,10 @@
 				<array  len="0" shared="false">
 				</array>
 				<string> "" </string>
+				<vector2> 1, 1 </vector2>
+				<int> -10000000 </int>
+				<int> 10000000 </int>
+				<real> 0.2 </real>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>
