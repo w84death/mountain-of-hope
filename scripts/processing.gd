@@ -1,5 +1,6 @@
 
 var bag
+var wrapper_template = preload("res://scripts/processing_wrapper.gd")
 
 var ready = false
 
@@ -10,18 +11,16 @@ func _init_bag(bag):
     self.ready = true
 
 func register(object):
-    self.objects[object.get_instance_ID()] = object
+    var wrapper = self.wrapper_template.new(self, object)
+    self.objects[object.get_instance_ID()] = wrapper
+    self.bag.root.add_child(wrapper)
 
 func remove(object):
-    self.objects.erase(object.get_instance_ID())
-
-func process(delta):
-    if not self.ready:
-        return
-
-    for id in self.objects:
-        if self.objects[id].is_processing:
-            self.objects[id].process(delta)
+    var wrapper = self.objects[object.get_instance_ID()]
+    wrapper.kill()
+    self.bag.root.remove_child(wrapper)
+    self.objects.erase(wrapper)
 
 func reset():
-    self.objects.clear()
+    for id in self.objects:
+        self.remove(self.objects[id])

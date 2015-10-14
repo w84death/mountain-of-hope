@@ -133,9 +133,9 @@
 			<string> "node_count" </string>
 			<int> 9 </int>
 			<string> "nodes" </string>
-			<int_array  len="221"> 				-1, -1, 1, 0, -1, 8, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 4, 8, 5, 9, 6, 0, 0, 0, 11, 10, -1, 9, 12, 7, 13, 7, 14, 8, 2, 9, 4, 2, 5, 3, 6, 4, 7, 4, 15, 2, 0, 1, 0, 1, 16, -1, 8, 14, 10, 17, 11, 2, 10, 3, 11, 4, 2, 5, 3, 6, 4, 7, 4, 0, 2, 0, 18, 10, -1, 2, 19, 12, 20, 13, 0, 0, 0, 21, 21, -1, 14, 22, 7, 23, 14, 24, 15, 25, 16, 26, 15, 27, 15, 28, 15, 29, 17, 30, 15, 31, 15, 32, 15, 33, 4, 34, 15, 35, 15, 0, 0, 0, 36, 36, -1, 8, 37, 18, 38, 3, 39, 3, 40, 15, 41, 3, 42, 2, 43, 15, 44, 19, 0, 0, 0, 45, 45, -1, 13, 46, 20, 47, 2, 48, 21, 49, 2, 50, 2, 51, 2, 52, 3, 53, 2, 54, 2, 55, 4, 56, 2, 57, 2, 58, 2, 0, 6, 0, 1, 59, -1, 6, 2, 22, 3, 22, 4, 2, 5, 3, 6, 4, 7, 4, 0, 0, 0, 60, 60, -1, 11, 14, 23, 17, 24, 2, 25, 3, 26, 4, 3, 5, 3, 6, 4, 61, 27, 62, 16, 63, 17, 64, 28, 0 </int_array>
+			<int_array  len="225"> 				-1, -1, 1, 0, -1, 8, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 4, 8, 5, 9, 6, 0, 0, 0, 11, 10, -1, 10, 12, 7, 13, 7, 14, 8, 2, 9, 4, 2, 5, 3, 6, 4, 7, 4, 15, 2, 9, 10, 0, 1, 0, 1, 16, -1, 8, 14, 11, 17, 12, 2, 11, 3, 12, 4, 2, 5, 3, 6, 4, 7, 4, 0, 2, 0, 18, 10, -1, 2, 19, 13, 20, 14, 0, 0, 0, 21, 21, -1, 14, 22, 7, 23, 15, 24, 16, 25, 17, 26, 16, 27, 16, 28, 16, 29, 18, 30, 16, 31, 16, 32, 16, 33, 4, 34, 16, 35, 16, 0, 0, 0, 36, 36, -1, 8, 37, 19, 38, 3, 39, 3, 40, 16, 41, 3, 42, 2, 43, 16, 44, 20, 0, 0, 0, 45, 45, -1, 14, 46, 21, 47, 2, 48, 22, 49, 2, 50, 2, 51, 2, 52, 3, 53, 2, 54, 2, 55, 4, 56, 2, 57, 2, 58, 2, 9, 23, 0, 6, 0, 1, 59, -1, 6, 2, 24, 3, 24, 4, 2, 5, 3, 6, 4, 7, 4, 0, 0, 0, 60, 60, -1, 11, 14, 25, 17, 26, 2, 27, 3, 28, 4, 3, 5, 3, 6, 4, 61, 29, 62, 17, 63, 18, 64, 30, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="29" shared="false">
+			<array  len="31" shared="false">
 				<real> 1280 </real>
 				<real> 720 </real>
 				<bool> False </bool>
@@ -150,7 +150,7 @@
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -450.264, -285.603 </vector2>
+							<vector2> -604.725, -569.107 </vector2>
 							<string> "snap_grid" </string>
 							<bool> False </bool>
 							<string> "snap_offset" </string>
@@ -170,7 +170,7 @@
 							<string> "snap_step" </string>
 							<vector2> 10, 10 </vector2>
 							<string> "zoom" </string>
-							<real> 0.487675 </real>
+							<real> 0.358486 </real>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
@@ -281,6 +281,10 @@
 				<int> 1 </int>
 				<real> 3 </real>
 				<real> -3 </real>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
 				<real> 640 </real>
 				<real> 360 </real>
 				<vector2> 2, 2 </vector2>
@@ -292,7 +296,11 @@
 				<resource  external="6">  </resource>
 				<int> 500 </int>
 				<rect2> 0, 0, 1280, 720 </rect2>
-				<resource name=""></resource>				<real> 40 </real>
+				<resource name=""></resource>				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 40 </real>
 				<real> 9 </real>
 				<real> 18 </real>
 				<real> 112 </real>
