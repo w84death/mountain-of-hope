@@ -64,7 +64,7 @@
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -1343.5, -1479.32 </vector2>
+							<vector2> -318.884, -280.071 </vector2>
 							<string> "snap_grid" </string>
 							<bool> True </bool>
 							<string> "snap_offset" </string>
@@ -84,7 +84,7 @@
 							<string> "snap_step" </string>
 							<vector2> 10, 10 </vector2>
 							<string> "zoom" </string>
-							<real> 0.085258 </real>
+							<real> 0.487675 </real>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
@@ -195,7 +195,7 @@
 				<resource  external="0">  </resource>
 				<node_path> "" </node_path>
 				<vector2> 0, -320 </vector2>
-				<vector2> 0, 0.3 </vector2>
+				<vector2> 0, 0.1 </vector2>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
 					<string> "2D" </string>
