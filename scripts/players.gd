@@ -11,11 +11,12 @@ func _init_bag(bag):
 func bind_players():
     self.players = [
         self.player_template.new(self.bag, 0),
-        self.player_template.new(self.bag, 1),
-        self.player_template.new(self.bag, 2),
-        self.player_template.new(self.bag, 3),
     ]
     self.players[0].bind_keyboard_and_mouse()
+
+func spawn_players():
+    for player in self.players:
+        player.enter_game()
 
 func move_to_entry_position(name):
     for player in self.players:

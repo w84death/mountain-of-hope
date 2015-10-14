@@ -13,6 +13,7 @@ func _init_bag(bag):
 func start_game():
     self.bag.game_state.game_in_progress = true
     self.bag.root.add_child(self.game_board)
+    self.bag.players.spawn_players()
     #self.bag.map.generate_map(self.bag.game_state.level)
     #self.bag.map.switch_to_cell(self.bag.map.start_cell)
     #self.bag.hud.show()

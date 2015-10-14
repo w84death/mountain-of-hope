@@ -15,12 +15,19 @@ var hat = false
 var stun_duration = 0.15
 var stun_level = 0
 
+var is_in_air = false
+var is_on_wall = false
+var wall_vector = Vector2(0, 0)
+
 var tombstone_template #= preload("res://scenes/particles/thumbstone.xscn")
 
 var FLOOR_FRICTION = 25
-var MOVEMENT_SPEED_CAP = 10
+var MOVEMENT_SPEED_CAP_LAND = 10
+var MOVEMENT_SPEED_CAP_AIR = 12
 var GRAVITY = 30
 var COLLIDING_FALL = 0.1
+var JUMP_SPEED = 20
+var AIR_CONTROL = 0.8
 
 func _init(bag).(bag):
     self.bag = bag
@@ -43,27 +50,46 @@ func modify_position(delta):
     var current_motion = Vector2(self.movement_vector[0], self.movement_vector[1])
     var motion_delta = Vector2(x, y) * self.velocity * delta
 
+    if self.is_in_air:
+        motion_delta = motion_delta * self.AIR_CONTROL
+
     motion_delta.y = motion_delta.y + self.GRAVITY * delta
 
     current_motion = current_motion + motion_delta
 
-    if abs(current_motion.x) > self.MOVEMENT_SPEED_CAP:
+    var speed_cap = self.MOVEMENT_SPEED_CAP_LAND
+    if self.is_in_air:
+        speed_cap = self.MOVEMENT_SPEED_CAP_AIR
+    if abs(current_motion.x) > speed_cap:
         if current_motion.x < 0:
-            current_motion.x = -self.MOVEMENT_SPEED_CAP
+            current_motion.x = -speed_cap
         else:
-            current_motion.x = self.MOVEMENT_SPEED_CAP
+            current_motion.x = speed_cap
 
-    if abs(current_motion.y) > self.MOVEMENT_SPEED_CAP:
+    if abs(current_motion.y) > speed_cap:
         if current_motion.y < 0:
-            current_motion.y = -self.MOVEMENT_SPEED_CAP
+            current_motion.y = -speed_cap
         else:
-            current_motion.y = self.MOVEMENT_SPEED_CAP
+            current_motion.y = speed_cap
 
-    if current_motion == Vector2(0, 0):
+    if current_motion == Vector2(0, 0) && not self.is_in_air:
         return
+
+    if not self.is_in_air && self.is_jumping:
+        current_motion.y = -self.JUMP_SPEED
+
+        if self.is_on_wall:
+            current_motion.x = self.wall_vector.x * self.JUMP_SPEED
 
     self.avatar.move(current_motion)
     if (self.avatar.is_colliding()):
+        var normal = self.avatar.get_collision_normal()
+        if (normal.x == 1 || normal.x == -1) && abs(normal.y) < 0.01:
+            self.is_on_wall = true
+            self.wall_vector = normal
+        else:
+            self.is_on_wall = false
+
         if abs(current_motion.x) < self.FLOOR_FRICTION * delta:
             current_motion.x = 0
         else:
@@ -74,22 +100,19 @@ func modify_position(delta):
 
         var n = self.avatar.get_collision_normal()
         current_motion = n.slide(current_motion)
-        current_motion.y = self.COLLIDING_FALL
+        if not self.is_in_air:
+            current_motion.y = self.COLLIDING_FALL
+        self.is_in_air = false
         self.avatar.move(current_motion)
-        self.handle_collision()
+        self.handle_collision(self.avatar.get_collider())
+    else:
+        self.is_in_air = true
+        self.is_on_wall = false
     self.flip(self.controller_vector[0])
     self.movement_vector[0] = current_motion.x
     self.movement_vector[1] = current_motion.y
 
-func integrate_forces(delta):
-
-    if self.avatar.is_colliding():
-        self.movement_vector[1] = self.COLLIDING_FALL
-        print('colliding with ', self.avatar.get_collider())
-    else:
-        self.movement_vector[1] = self.movement_vector[1] + self.GRAVITY * delta
-
-func handle_collision():
+func handle_collision(collider):
     return
 
 func apply_axis_threshold(axis_value):

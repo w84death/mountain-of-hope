@@ -13,6 +13,8 @@ var blast
 var panel
 var hp_cap = 16
 
+var is_jumping = false
+
 var EXIT_THRESHOLD = 30
 
 func _init(bag, player_id).(bag):
@@ -52,9 +54,10 @@ func bind_gamepad(id):
 func bind_keyboard_and_mouse():
     var keyboard = self.bag.input.devices['keyboard']
     var mouse = self.bag.input.devices['mouse']
-    keyboard.register_handler(preload("res://scripts/input/handlers/player_enter_game_keyboard.gd").new(self.bag, self))
-    keyboard.register_handler(preload("res://scripts/input/handlers/player_move_key.gd").new(self.bag, self, 1, KEY_W, -1))
-    keyboard.register_handler(preload("res://scripts/input/handlers/player_move_key.gd").new(self.bag, self, 1, KEY_S, 1))
+    #keyboard.register_handler(preload("res://scripts/input/handlers/player_enter_game_keyboard.gd").new(self.bag, self))
+    #keyboard.register_handler(preload("res://scripts/input/handlers/player_move_key.gd").new(self.bag, self, 1, KEY_W, -1))
+    #keyboard.register_handler(preload("res://scripts/input/handlers/player_move_key.gd").new(self.bag, self, 1, KEY_S, 1))
+    keyboard.register_handler(preload("res://scripts/input/handlers/player_jump_key.gd").new(self.bag, self, KEY_SPACE))
     keyboard.register_handler(preload("res://scripts/input/handlers/player_move_key.gd").new(self.bag, self, 0, KEY_A, -1))
     keyboard.register_handler(preload("res://scripts/input/handlers/player_move_key.gd").new(self.bag, self, 0, KEY_D, 1))
     mouse.register_handler(preload("res://scripts/input/handlers/player_attack_mouse.gd").new(self.bag, self))
@@ -78,11 +81,16 @@ func die():
 func process(delta):
     .process(delta)
     self.handle_items()
-    print(self.movement_vector)
 
 func modify_position(delta):
     .modify_position(delta)
     self.handle_animations()
+
+func jump(jumping_flag):
+    self.is_jumping = jumping_flag
+
+func handle_collision(collider):
+    return
 
 func handle_animations():
     if not self.animations.is_playing():
