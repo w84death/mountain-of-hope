@@ -2,19 +2,19 @@
 <resource_file type="PackedScene" subresource_count="19" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
 	<ext_resource path="res://scenes/map/background.xscn" type="PackedScene" index="9"></ext_resource>
 	<ext_resource path="res://scenes/player/assets/die.wav" type="Sample" index="6"></ext_resource>
-	<ext_resource path="res://scenes/hud/assets/corner.png" type="Texture" index="14"></ext_resource>
 	<ext_resource path="res://scenes/shaders/vigette.png" type="Texture" index="12"></ext_resource>
-	<ext_resource path="res://scenes/hud/assets/dos437-16.fnt" type="Font" index="3"></ext_resource>
-	<ext_resource path="res://scenes/shaders/white.png" type="Texture" index="13"></ext_resource>
-	<ext_resource path="res://scenes/hud/assets/goral.png" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://scenes/hud/assets/corner.png" type="Texture" index="14"></ext_resource>
 	<ext_resource path="res://scripts/main.gd" type="Script" index="0"></ext_resource>
 	<ext_resource path="res://scenes/player/assets/attack_right.wav" type="Sample" index="5"></ext_resource>
-	<ext_resource path="res://scenes/dance.ogg" type="AudioStream" index="8"></ext_resource>
 	<ext_resource path="res://scenes/player/assets/hit.wav" type="Sample" index="7"></ext_resource>
 	<ext_resource path="res://scenes/shaders/snow2.png" type="Texture" index="11"></ext_resource>
 	<ext_resource path="res://scenes/player/assets/attack_left.wav" type="Sample" index="4"></ext_resource>
+	<ext_resource path="res://scenes/hud/assets/dos437-16.fnt" type="Font" index="3"></ext_resource>
+	<ext_resource path="res://scenes/shaders/white.png" type="Texture" index="13"></ext_resource>
+	<ext_resource path="res://scenes/hud/assets/goral.png" type="Texture" index="2"></ext_resource>
 	<ext_resource path="res://scenes/hud/assets/logo.png" type="Texture" index="1"></ext_resource>
 	<ext_resource path="res://scenes/hud/hud.xscn" type="PackedScene" index="10"></ext_resource>
+	<ext_resource path="res://sounds/polka_final.ogg" type="AudioStream" index="8"></ext_resource>
 	<resource type="SampleLibrary" path="local://1">
 		<dictionary name="samples/game_over" shared="false">
 			<string> "db" </string>
@@ -31,13 +31,20 @@
 			<string> "sample" </string>
 			<resource  external="6">  </resource>
 		</dictionary>
-		<dictionary name="samples/player_hit" shared="false">
+		<dictionary name="samples/you_can" shared="false">
 			<string> "db" </string>
 			<real> 0 </real>
 			<string> "pitch" </string>
 			<real> 1 </real>
 			<string> "sample" </string>
-			<resource  external="7">  </resource>
+			<resource name=""></resource>		</dictionary>
+		<dictionary name="samples/player_attack2" shared="false">
+			<string> "db" </string>
+			<real> 0 </real>
+			<string> "pitch" </string>
+			<real> 1 </real>
+			<string> "sample" </string>
+			<resource  external="5">  </resource>
 		</dictionary>
 		<dictionary name="samples/player_attack1" shared="false">
 			<string> "db" </string>
@@ -47,21 +54,14 @@
 			<string> "sample" </string>
 			<resource  external="4">  </resource>
 		</dictionary>
-		<dictionary name="samples/player_attack2" shared="false">
+		<dictionary name="samples/player_hit" shared="false">
 			<string> "db" </string>
 			<real> 0 </real>
 			<string> "pitch" </string>
 			<real> 1 </real>
 			<string> "sample" </string>
-			<resource  external="5">  </resource>
+			<resource  external="7">  </resource>
 		</dictionary>
-		<dictionary name="samples/you_can" shared="false">
-			<string> "db" </string>
-			<real> 0 </real>
-			<string> "pitch" </string>
-			<real> 1 </real>
-			<string> "sample" </string>
-			<resource name=""></resource>		</dictionary>
 
 	</resource>
 	<resource type="CanvasItemShader" path="local://23">
@@ -86,7 +86,7 @@
 		<int name="shader/shading_mode"> 0 </int>
 		<color name="shader_param/base"> 0.39048, 0.435342, 0.405715, 1 </color>
 		<resource name="shader_param/grain" external="11">  </resource>
-		<real name="shader_param/grain_strength"> 0.3 </real>
+		<real name="shader_param/grain_strength"> 0.15 </real>
 		<resource name="shader_param/vignette" external="12">  </resource>
 		<real name="shader_param/fps"> 12 </real>
 		<real name="shader_param/stretch"> 0.5 </real>

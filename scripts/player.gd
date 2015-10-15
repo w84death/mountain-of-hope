@@ -88,6 +88,7 @@ func modify_position(delta):
     self.handle_animations()
 
 func jump(jumping_flag):
+    # self.bag.sample_player.play(self.sounds[name])
     self.is_jumping = jumping_flag
 
 func handle_collision(collider):
