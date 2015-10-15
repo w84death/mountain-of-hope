@@ -37,6 +37,31 @@
 		</dictionary>
 
 	</resource>
+	<resource type="Animation" path="local://9">
+		<string name="resource/name"> "run" </string>
+		<real name="length"> 0.5 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "body:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> False </bool>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.1, 0.2, 0.3 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<int> 0 </int>
+				<int> 1 </int>
+				<int> 0 </int>
+				<int> 2 </int>
+			</array>
+		</dictionary>
+
+	</resource>
 	<resource type="Animation" path="local://10">
 		<string name="resource/name"> "drink" </string>
 		<real name="length"> 1.8 </real>
@@ -59,31 +84,6 @@
 				<int> 3 </int>
 				<int> 4 </int>
 				<int> 5 </int>
-			</array>
-		</dictionary>
-
-	</resource>
-	<resource type="Animation" path="local://9">
-		<string name="resource/name"> "run" </string>
-		<real name="length"> 0.5 </real>
-		<bool name="loop"> True </bool>
-		<real name="step"> 0.1 </real>
-		<string name="tracks/0/type"> "value" </string>
-		<node_path name="tracks/0/path"> "body:frame" </node_path>
-		<int name="tracks/0/interp"> 1 </int>
-		<dictionary name="tracks/0/keys" shared="false">
-			<string> "cont" </string>
-			<bool> False </bool>
-			<string> "times" </string>
-			<real_array  len="4"> 				0, 0.1, 0.2, 0.3 </real_array>
-			<string> "transitions" </string>
-			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="4" shared="false">
-				<int> 0 </int>
-				<int> 1 </int>
-				<int> 0 </int>
-				<int> 2 </int>
 			</array>
 		</dictionary>
 
@@ -128,8 +128,8 @@
 				<string> "root/root" </string>
 				<string> "anims/idle" </string>
 				<string> "anims/attack" </string>
-				<string> "anims/drink" </string>
 				<string> "anims/run" </string>
+				<string> "anims/drink" </string>
 				<string> "playback/active" </string>
 				<string> "playback/speed" </string>
 				<string> "blend_times" </string>
@@ -318,8 +318,8 @@
 				<node_path> ".." </node_path>
 				<resource  resource_type="Animation" path="local://11">  </resource>
 				<resource  resource_type="Animation" path="local://12">  </resource>
-				<resource  resource_type="Animation" path="local://10">  </resource>
 				<resource  resource_type="Animation" path="local://9">  </resource>
+				<resource  resource_type="Animation" path="local://10">  </resource>
 				<bool> True </bool>
 				<real> 1 </real>
 				<array  len="0" shared="false">

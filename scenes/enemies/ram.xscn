@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="7" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
-	<ext_resource path="res://scenes/enemies/assets/krakowiak.png" type="Texture" index="0"></ext_resource>
+<resource_file type="PackedScene" subresource_count="6" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
+	<ext_resource path="res://scenes/enemies/assets/baran.png" type="Texture" index="0"></ext_resource>
 	<resource type="CircleShape2D" path="local://7">
 		<real name="custom_solver_bias"> 0 </real>
-		<real name="radius"> 10 </real>
+		<real name="radius"> 10.133161 </real>
 
 	</resource>
 	<resource type="Animation" path="local://11">
@@ -11,26 +11,11 @@
 		<real name="length"> 1 </real>
 		<bool name="loop"> False </bool>
 		<real name="step"> 0.1 </real>
-		<string name="tracks/0/type"> "value" </string>
-		<node_path name="tracks/0/path"> "body:frame" </node_path>
-		<int name="tracks/0/interp"> 1 </int>
-		<dictionary name="tracks/0/keys" shared="false">
-			<string> "cont" </string>
-			<bool> False </bool>
-			<string> "times" </string>
-			<real_array  len="1"> 				0 </real_array>
-			<string> "transitions" </string>
-			<real_array  len="1"> 				1 </real_array>
-			<string> "values" </string>
-			<array  len="1" shared="false">
-				<int> 0 </int>
-			</array>
-		</dictionary>
 
 	</resource>
 	<resource type="Animation" path="local://12">
 		<string name="resource/name"> "attack" </string>
-		<real name="length"> 0.4 </real>
+		<real name="length"> 0.5 </real>
 		<bool name="loop"> True </bool>
 		<real name="step"> 0.1 </real>
 		<string name="tracks/0/type"> "value" </string>
@@ -45,15 +30,15 @@
 			<real_array  len="2"> 				1, 1 </real_array>
 			<string> "values" </string>
 			<array  len="2" shared="false">
-				<int> 6 </int>
-				<int> 7 </int>
+				<int> 2 </int>
+				<int> 3 </int>
 			</array>
 		</dictionary>
 
 	</resource>
 	<resource type="Animation" path="local://9">
 		<string name="resource/name"> "run" </string>
-		<real name="length"> 0.5 </real>
+		<real name="length"> 0.3 </real>
 		<bool name="loop"> True </bool>
 		<real name="step"> 0.1 </real>
 		<string name="tracks/0/type"> "value" </string>
@@ -63,41 +48,13 @@
 			<string> "cont" </string>
 			<bool> False </bool>
 			<string> "times" </string>
-			<real_array  len="4"> 				0, 0.1, 0.3, 0.4 </real_array>
+			<real_array  len="2"> 				0, 0.1 </real_array>
 			<string> "transitions" </string>
-			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<real_array  len="2"> 				1, 1 </real_array>
 			<string> "values" </string>
-			<array  len="4" shared="false">
+			<array  len="2" shared="false">
 				<int> 0 </int>
 				<int> 1 </int>
-				<int> 0 </int>
-				<int> 2 </int>
-			</array>
-		</dictionary>
-
-	</resource>
-	<resource type="Animation" path="local://10">
-		<string name="resource/name"> "drink" </string>
-		<real name="length"> 1.8 </real>
-		<bool name="loop"> True </bool>
-		<real name="step"> 0.1 </real>
-		<string name="tracks/0/type"> "value" </string>
-		<node_path name="tracks/0/path"> "body:frame" </node_path>
-		<int name="tracks/0/interp"> 1 </int>
-		<dictionary name="tracks/0/keys" shared="false">
-			<string> "cont" </string>
-			<bool> False </bool>
-			<string> "times" </string>
-			<real_array  len="5"> 				0, 0.2, 0.4, 0.6, 0.9 </real_array>
-			<string> "transitions" </string>
-			<real_array  len="5"> 				1, 1, 1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="5" shared="false">
-				<int> 3 </int>
-				<int> 4 </int>
-				<int> 3 </int>
-				<int> 4 </int>
-				<int> 5 </int>
 			</array>
 		</dictionary>
 
@@ -109,8 +66,8 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="37">
-				<string> "enemie" </string>
+			<string_array  len="35">
+				<string> "ram" </string>
 				<string> "KinematicBody2D" </string>
 				<string> "z/z" </string>
 				<string> "input/pickable" </string>
@@ -126,7 +83,6 @@
 				<string> "transform/pos" </string>
 				<string> "transform/scale" </string>
 				<string> "texture" </string>
-				<string> "vframes" </string>
 				<string> "hframes" </string>
 				<string> "frame" </string>
 				<string> "collision" </string>
@@ -142,7 +98,6 @@
 				<string> "anims/idle" </string>
 				<string> "anims/attack" </string>
 				<string> "anims/run" </string>
-				<string> "anims/drink" </string>
 				<string> "playback/active" </string>
 				<string> "playback/speed" </string>
 				<string> "blend_times" </string>
@@ -151,13 +106,13 @@
 			<string> "node_count" </string>
 			<int> 4 </int>
 			<string> "nodes" </string>
-			<int_array  len="90"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 3, 6, 1, 7, 4, 8, 4, 9, 5, 10, 6, 0, 0, 0, 12, 11, -1, 6, 13, 7, 14, 8, 15, 9, 16, 10, 17, 11, 18, 4, 0, 0, 0, 20, 19, -1, 5, 13, 12, 14, 13, 21, 2, 22, 1, 23, 14, 0, 0, 0, 25, 24, -1, 11, 26, 4, 27, 15, 28, 16, 29, 17, 30, 18, 31, 19, 32, 20, 33, 21, 34, 22, 35, 23, 36, 24, 0 </int_array>
+			<int_array  len="86"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 3, 6, 1, 7, 4, 8, 4, 9, 5, 10, 6, 0, 0, 0, 12, 11, -1, 5, 13, 7, 14, 8, 15, 9, 16, 10, 17, 4, 0, 0, 0, 19, 18, -1, 5, 13, 11, 14, 12, 20, 2, 21, 1, 22, 13, 0, 0, 0, 24, 23, -1, 10, 25, 4, 26, 14, 27, 15, 28, 16, 29, 17, 30, 18, 31, 19, 32, 20, 33, 21, 34, 22, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="25" shared="false">
+			<array  len="23" shared="false">
 				<int> 100 </int>
 				<bool> False </bool>
 				<resource  resource_type="Shape2D" path="local://7">  </resource>
-				<matrix32> 1.91143, -0, 0, 3.00995, -0.0914183, -34.9321 </matrix32>
+				<matrix32> 3.33014, -0, 0, 1.89829, 4.67201, -18.1975 </matrix32>
 				<int> 1 </int>
 				<real> 0.08 </real>
 				<dictionary  shared="false">
@@ -285,7 +240,7 @@
 						<string> "Anim" </string>
 						<dictionary  shared="false">
 							<string> "animation" </string>
-							<string> "idle" </string>
+							<string> "run" </string>
 							<string> "editing" </string>
 							<bool> True </bool>
 							<string> "player" </string>
@@ -302,25 +257,23 @@
 						<int> 0 </int>
 					</dictionary>
 				</dictionary>
-				<vector2> -3.22638, -31.5468 </vector2>
+				<vector2> -0.716965, -29.3958 </vector2>
 				<vector2> 2, 2 </vector2>
 				<resource  external="0">  </resource>
-				<int> 2 </int>
-				<int> 6 </int>
-				<vector2> -0.0914183, -34.9321 </vector2>
-				<vector2> 1.91143, 3.00995 </vector2>
+				<int> 4 </int>
+				<vector2> 4.67201, -18.1975 </vector2>
+				<vector2> 3.33014, 1.89829 </vector2>
 				<int> 0 </int>
 				<real> 0 </real>
 				<node_path> ".." </node_path>
 				<resource  resource_type="Animation" path="local://11">  </resource>
 				<resource  resource_type="Animation" path="local://12">  </resource>
 				<resource  resource_type="Animation" path="local://9">  </resource>
-				<resource  resource_type="Animation" path="local://10">  </resource>
 				<bool> True </bool>
 				<real> 1 </real>
 				<array  len="0" shared="false">
 				</array>
-				<string> "drink" </string>
+				<string> "run" </string>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>
