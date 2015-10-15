@@ -12,7 +12,7 @@ var SEGMENT_SIZE = 60
 var SEGMENT_LINE_HEIGHT = 36
 
 var WALL_HEIGHT = 39
-var WALL_HALF_WIDTH = 36
+var WALL_HALF_WIDTH = 20
 
 var platforms = {
     'grass' : [
@@ -104,7 +104,7 @@ func add_walls(segment):
         left_wall = self.left_wall_template.instance()
         right_wall = self.right_wall_template.instance()
 
-        wall_offset = self.SCREEN_MARGIN - self.WALL_HALF_WIDTH
+        wall_offset = self.SCREEN_MARGIN + self.WALL_HALF_WIDTH
         real_height = (height + self.WALL_HEIGHT / 2) * self.SEGMENT_LINE_HEIGHT
         segment = self.add_segment_object(segment, wall_offset, real_height, left_wall)
         segment = self.add_segment_object(segment, wall_offset + self.playable_width + self.WALL_HALF_WIDTH * 2, real_height, right_wall)
