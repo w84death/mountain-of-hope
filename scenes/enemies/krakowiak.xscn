@@ -151,14 +151,14 @@
 			<string> "node_count" </string>
 			<int> 4 </int>
 			<string> "nodes" </string>
-			<int_array  len="90"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 3, 6, 1, 7, 4, 8, 4, 9, 5, 10, 6, 0, 0, 0, 12, 11, -1, 6, 13, 7, 14, 8, 15, 9, 16, 10, 17, 11, 18, 4, 0, 0, 0, 20, 19, -1, 5, 13, 12, 14, 13, 21, 2, 22, 1, 23, 14, 0, 0, 0, 25, 24, -1, 11, 26, 4, 27, 15, 28, 16, 29, 17, 30, 18, 31, 19, 32, 20, 33, 21, 34, 22, 35, 23, 36, 24, 0 </int_array>
+			<int_array  len="90"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 3, 6, 1, 7, 4, 8, 4, 9, 5, 10, 6, 0, 0, 0, 12, 11, -1, 6, 13, 7, 14, 8, 15, 9, 16, 4, 17, 10, 18, 11, 0, 0, 0, 20, 19, -1, 5, 13, 12, 14, 13, 21, 2, 22, 1, 23, 14, 0, 0, 0, 25, 24, -1, 11, 26, 11, 27, 15, 28, 16, 29, 17, 30, 18, 31, 19, 32, 20, 33, 21, 34, 22, 35, 23, 36, 24, 0 </int_array>
 			<string> "variants" </string>
 			<array  len="25" shared="false">
 				<int> 100 </int>
 				<bool> False </bool>
 				<resource  resource_type="Shape2D" path="local://7">  </resource>
 				<matrix32> 1.91143, -0, 0, 3.00995, -0.0914183, -34.9321 </matrix32>
-				<int> 1 </int>
+				<int> 2 </int>
 				<real> 0.08 </real>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
@@ -305,8 +305,8 @@
 				<vector2> -3.22638, -31.5468 </vector2>
 				<vector2> 2, 2 </vector2>
 				<resource  external="0">  </resource>
-				<int> 2 </int>
 				<int> 6 </int>
+				<int> 1 </int>
 				<vector2> -0.0914183, -34.9321 </vector2>
 				<vector2> 1.91143, 3.00995 </vector2>
 				<int> 0 </int>

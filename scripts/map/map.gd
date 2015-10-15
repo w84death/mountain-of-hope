@@ -148,12 +148,19 @@ func add_platforms(segment, index):
     return segment
 
 func generate_single_platform(segment, iterator, templates):
-    var template = templates[randi() % templates.size()]
+    var template = templates[randi() % 2]
     var new_platform = template.template.instance()
 
     var horizontal_position = randi() % (self.playable_width - template.width)
     horizontal_position = horizontal_position + self.SCREEN_MARGIN + int(template.width / 2)
 
     segment = self.add_segment_object(segment, horizontal_position, (iterator + 1) * self.SEGMENT_LINE_HEIGHT, new_platform)
+
+    var offset = self.SCREEN_WIDTH / 2 - horizontal_position
+    if abs(offset) > 100 && (randi() % 2 == 0):
+        new_platform = templates[2].template.instance()
+        horizontal_position = self.SCREEN_WIDTH / 2 + offset
+
+        segment = self.add_segment_object(segment, horizontal_position, (iterator + 1) * self.SEGMENT_LINE_HEIGHT, new_platform)
 
     return segment
