@@ -13,6 +13,7 @@ var items = preload("res://scripts/items.gd").new()
 var processing = preload("res://scripts/processing.gd").new()
 var map = preload("res://scripts/map/map.gd").new()
 var menu = preload('res://scripts/menu.gd').new()
+var sound_controller = preload('res://scripts/controllers/sound_controller.gd').new()
 var sample_player
 var stream_player
 
@@ -32,6 +33,7 @@ func _init(root_node):
     self.hud._init_bag(self)
     self.sample_player = self.root.get_node('SamplePlayer')
     self.stream_player = self.root.get_node('StreamPlayer')
+    self.sound_controller._init_bag(self)
 
 func reset():
     self.players.reset()

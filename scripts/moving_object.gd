@@ -82,6 +82,8 @@ func modify_position(delta):
             self.can_jump = false
             self.bag.timers.set_timeout(1, self, 'enable_jump')
 
+        self.handle_jump()
+
     current_motion = self.apply_friction(current_motion, delta)
 
     self.avatar.move(current_motion)
@@ -108,6 +110,9 @@ func modify_position(delta):
     self.movement_vector[1] = current_motion.y
 
 func handle_collision(collider):
+    return
+
+func handle_jump():
     return
 
 func apply_friction(current_motion, delta):
