@@ -57,7 +57,7 @@ func bind_keyboard_and_mouse():
     keyboard.register_handler(preload("res://scripts/input/handlers/player_jump_key.gd").new(self.bag, self, KEY_SPACE))
     keyboard.register_handler(preload("res://scripts/input/handlers/player_move_key.gd").new(self.bag, self, 0, KEY_A, -1))
     keyboard.register_handler(preload("res://scripts/input/handlers/player_move_key.gd").new(self.bag, self, 0, KEY_D, 1))
-    keyboard.register_handler(preload("res://scripts/input/handlers/player_drink_key.gd").new(self.bag, self, 0, KEY_w, 1))
+    keyboard.register_handler(preload("res://scripts/input/handlers/player_drink_key.gd").new(self.bag, self, KEY_W))
     #mouse.register_handler(preload("res://scripts/input/handlers/player_attack_mouse.gd").new(self.bag, self))
 
 func enter_game():
@@ -116,6 +116,10 @@ func handle_animations():
 func drink():
     if not self.is_in_air && not self.is_on_wall:
         self.animations.play('drink')
+        self.bag.timers.set_timeout(1, self, 'stop_drink')
+
+func stop_drink():
+    self.animations.play('idle')
 
 
 func handle_items():
