@@ -13,6 +13,7 @@ func bind_players():
         self.player_template.new(self.bag, 0),
     ]
     self.players[0].bind_keyboard_and_mouse()
+    self.players[0].bind_arcade()
 
 func spawn_players():
     for player in self.players:

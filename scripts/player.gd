@@ -30,7 +30,6 @@ func _init(bag, player_id).(bag):
     self.body = self.avatar.get_node('body')
 
 
-    #self.bind_gamepad(player_id)
     #self.panel = self.bag.hud.bind_player_panel(player_id)
     self.update_bars()
 
@@ -39,14 +38,11 @@ func _init(bag, player_id).(bag):
     self.sounds['attack1'] = 'player_attack1'
     self.sounds['attack2'] = 'player_attack2'
 
-func bind_gamepad(id):
-    var gamepad = self.bag.input.devices['pad' + str(id)]
-    gamepad.register_handler(preload("res://scripts/input/handlers/player_enter_game_gamepad.gd").new(self.bag, self))
-    gamepad.register_handler(preload("res://scripts/input/handlers/player_move_axis.gd").new(self.bag, self, 0))
-    gamepad.register_handler(preload("res://scripts/input/handlers/player_move_axis.gd").new(self.bag, self, 1))
-    gamepad.register_handler(preload("res://scripts/input/handlers/player_cone_gamepad.gd").new(self.bag, self, 2))
-    gamepad.register_handler(preload("res://scripts/input/handlers/player_cone_gamepad.gd").new(self.bag, self, 3))
-    gamepad.register_handler(preload("res://scripts/input/handlers/player_attack_gamepad.gd").new(self.bag, self))
+func bind_arcade():
+    var arcade = self.bag.input.devices['arcade']
+    arcade.register_handler(preload("res://scripts/input/handlers/player_move_arcade.gd").new(self.bag, self, 0, JOY_BUTTON_11, -1))
+    arcade.register_handler(preload("res://scripts/input/handlers/player_move_arcade.gd").new(self.bag, self, 0, JOY_BUTTON_10, 1))
+    arcade.register_handler(preload("res://scripts/input/handlers/player_jump_arcade.gd").new(self.bag, self, JOY_BUTTON_15))
 
 func bind_keyboard_and_mouse():
     var keyboard = self.bag.input.devices['keyboard']
