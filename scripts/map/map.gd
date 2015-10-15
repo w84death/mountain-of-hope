@@ -36,6 +36,7 @@ var playable_width = 0
 
 func _init_bag(bag):
     self.bag = bag
+    self.SCREEN_MARGIN = int((self.SCREEN_WIDTH - 900) / 2)
     self.playable_width = self.SCREEN_WIDTH - (self.SCREEN_MARGIN * 2)
     self.reset_map()
 
@@ -88,7 +89,8 @@ func add_segment_object(segment, x, y, object):
 
 func add_separator(segment):
     var separator_platform = self.separator_template.instance()
-    segment = self.add_segment_object(segment, -10, self.SEGMENT_LINE_HEIGHT, separator_platform)
+    var vertical_position = self.SCREEN_WIDTH / 2 - 640
+    segment = self.add_segment_object(segment, vertical_position, self.SEGMENT_LINE_HEIGHT, separator_platform)
     return segment
 
 func add_walls(segment):

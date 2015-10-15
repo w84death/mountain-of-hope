@@ -12,6 +12,7 @@ var blast
 
 var panel
 var hp_cap = 16
+var top_height = 0
 
 var is_jumping = false
 
@@ -81,6 +82,9 @@ func process(delta):
 
 func check_map_segment():
     var height = -1 * int(self.avatar.get_pos().y)
+    if height > self.top_height:
+        self.top_height = height
+        self.bag.hud.set_score(height)
     self.bag.map.update_segments(height)
 
 func modify_position(delta):
@@ -195,6 +199,7 @@ func reset():
     self.controller_vector = [0, 0]
     self.score = 0
     self.is_attack_on_cooldown = false
+    self.top_height = 0
 
 func attack_cooled_down():
     self.is_attack_on_cooldown = false

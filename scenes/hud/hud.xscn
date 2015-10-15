@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="5" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
-	<ext_resource path="res://scenes/items/assets/mountain.png" type="Texture" index="2"></ext_resource>
-	<ext_resource path="res://scenes/items/assets/sliwowica.png" type="Texture" index="1"></ext_resource>
-	<ext_resource path="res://scenes/hud/assets/dos437-24.fnt" type="Font" index="0"></ext_resource>
 	<ext_resource path="res://scenes/hud/button.xscn" type="PackedScene" index="3"></ext_resource>
+	<ext_resource path="res://scenes/hud/assets/dos437-24.fnt" type="Font" index="0"></ext_resource>
+	<ext_resource path="res://scenes/items/assets/sliwowica.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://scenes/items/assets/mountain.png" type="Texture" index="2"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
@@ -11,7 +11,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="39">
+			<string_array  len="41">
 				<string> "hud" </string>
 				<string> "Control" </string>
 				<string> "anchor/right" </string>
@@ -41,8 +41,10 @@
 				<string> "transform/scale" </string>
 				<string> "texture" </string>
 				<string> "score" </string>
+				<string> "score1" </string>
 				<string> "score 2" </string>
 				<string> "mobile_buttons" </string>
+				<string> "visibility/visible" </string>
 				<string> "left_jump" </string>
 				<string> "_import_path" </string>
 				<string> "button_id" </string>
@@ -53,11 +55,11 @@
 				<string> "right_jump" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 14 </int>
+			<int> 15 </int>
 			<string> "nodes" </string>
-			<int_array  len="298"> 				-1, -1, 1, 0, -1, 7, 2, 0, 3, 0, 4, 1, 5, 2, 6, 3, 7, 3, 8, 4, 0, 0, 0, 10, 9, -1, 7, 2, 0, 11, 5, 4, 1, 5, 2, 6, 3, 7, 3, 12, 1, 0, 1, 0, 1, 13, -1, 8, 14, 6, 15, 7, 16, 6, 11, 7, 4, 1, 5, 2, 6, 3, 7, 3, 0, 2, 0, 18, 17, -1, 12, 14, 8, 15, 9, 16, 10, 11, 5, 4, 2, 5, 2, 6, 3, 19, 11, 20, 12, 21, 13, 22, 14, 23, 15, 0, 2, 0, 24, 24, -1, 3, 25, 16, 26, 17, 27, 18, 0, 2, 0, 18, 28, -1, 12, 14, 19, 15, 9, 16, 20, 11, 5, 4, 2, 5, 2, 6, 3, 19, 11, 20, 21, 21, 13, 22, 14, 23, 15, 0, 2, 0, 24, 29, -1, 3, 25, 22, 26, 17, 27, 23, 0, 2, 0, 1, 30, -1, 7, 16, 5, 11, 5, 4, 1, 5, 2, 6, 3, 7, 3, 8, 24, 0, 7, 0, 1, 31, 25, 7, 32, 26, 14, 27, 15, 28, 16, 29, 11, 30, 8, 31, 33, 3, 0, 7, 0, 1, 34, 25, 7, 32, 26, 14, 32, 15, 33, 16, 34, 11, 35, 8, 36, 33, 37, 0, 7, 0, 1, 35, 25, 6, 32, 26, 14, 27, 15, 38, 16, 29, 11, 6, 8, 39, 0, 7, 0, 1, 36, 25, 7, 32, 26, 14, 32, 15, 40, 16, 34, 11, 41, 8, 42, 33, 0, 0, 7, 0, 1, 37, 25, 7, 32, 26, 14, 27, 15, 33, 16, 29, 11, 35, 8, 43, 33, 44, 0, 7, 0, 1, 38, 25, 7, 32, 26, 14, 32, 15, 30, 16, 34, 11, 45, 8, 46, 33, 47, 0 </int_array>
+			<int_array  len="331"> 				-1, -1, 1, 0, -1, 7, 2, 0, 3, 0, 4, 1, 5, 2, 6, 3, 7, 3, 8, 4, 0, 0, 0, 10, 9, -1, 7, 2, 0, 11, 5, 4, 1, 5, 2, 6, 3, 7, 3, 12, 1, 0, 1, 0, 1, 13, -1, 8, 14, 6, 15, 7, 16, 6, 11, 7, 4, 1, 5, 2, 6, 3, 7, 3, 0, 2, 0, 18, 17, -1, 12, 14, 8, 15, 9, 16, 10, 11, 5, 4, 2, 5, 2, 6, 3, 19, 11, 20, 12, 21, 13, 22, 14, 23, 15, 0, 2, 0, 24, 24, -1, 3, 25, 16, 26, 17, 27, 18, 0, 2, 0, 18, 28, -1, 12, 14, 19, 15, 9, 16, 20, 11, 5, 4, 2, 5, 2, 6, 3, 19, 11, 20, 21, 21, 13, 22, 14, 23, 15, 0, 2, 0, 18, 29, -1, 12, 14, 19, 15, 22, 16, 20, 11, 23, 4, 2, 5, 2, 6, 3, 19, 11, 20, 24, 21, 13, 22, 14, 23, 15, 0, 2, 0, 24, 30, -1, 3, 25, 25, 26, 17, 27, 26, 0, 2, 0, 1, 31, -1, 8, 32, 1, 16, 5, 11, 5, 4, 1, 5, 2, 6, 3, 7, 3, 8, 27, 0, 8, 0, 1, 33, 28, 7, 34, 29, 14, 30, 15, 31, 16, 32, 11, 33, 8, 34, 35, 3, 0, 8, 0, 1, 36, 28, 7, 34, 29, 14, 35, 15, 36, 16, 37, 11, 38, 8, 39, 35, 40, 0, 8, 0, 1, 37, 28, 6, 34, 29, 14, 30, 15, 41, 16, 32, 11, 6, 8, 42, 0, 8, 0, 1, 38, 28, 7, 34, 29, 14, 35, 15, 43, 16, 37, 11, 44, 8, 45, 35, 0, 0, 8, 0, 1, 39, 28, 7, 34, 29, 14, 30, 15, 36, 16, 32, 11, 38, 8, 46, 35, 47, 0, 8, 0, 1, 40, 28, 7, 34, 29, 14, 35, 15, 33, 16, 37, 11, 48, 8, 49, 35, 50, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="48" shared="false">
+			<array  len="51" shared="false">
 				<int> 1 </int>
 				<bool> False </bool>
 				<bool> True </bool>
@@ -214,7 +216,10 @@
 				<resource  external="1">  </resource>
 				<real> 360 </real>
 				<real> 501 </real>
-				<string> "SCORE:&#000a;320m" </string>
+				<string> "SCORE:" </string>
+				<real> 15 </real>
+				<real> 65 </real>
+				<string> "320m" </string>
 				<vector2> 324, 14 </vector2>
 				<resource  external="2">  </resource>
 				<dictionary  shared="false">

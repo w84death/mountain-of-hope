@@ -4,7 +4,7 @@ var board
 
 var game_state = preload("res://scripts/game_state.gd").new()
 var action_controller = preload("res://scripts/controllers/action_controller.gd").new()
-
+var hud = preload("res://scripts/hud.gd").new()
 var timers = preload("res://scripts/timers.gd").new()
 var input = preload("res://scripts/input/input.gd").new()
 var players = preload("res://scripts/players.gd").new()
@@ -29,6 +29,7 @@ func _init(root_node):
     self.action_controller._init_bag(self)
     self.map._init_bag(self)
     self.menu._init_bag(self)
+    self.hud._init_bag(self)
     self.sample_player = self.root.get_node('SamplePlayer')
     self.stream_player = self.root.get_node('StreamPlayer')
 

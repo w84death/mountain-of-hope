@@ -15,7 +15,7 @@ func start_game():
     self.bag.root.get_node('Viewport/board').add_child(self.game_board)
     self.bag.players.spawn_players()
     self.bag.map.generate_next_map_segment()
-    #self.bag.hud.show()
+    self.bag.hud.show()
     self.bag.menu.hide()
 
 func end_game():
