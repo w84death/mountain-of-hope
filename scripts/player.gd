@@ -116,7 +116,9 @@ func handle_animations():
 func drink():
     if not self.is_in_air && not self.is_on_wall:
         self.animations.play('drink')
+        self.bag.sound_controller.play('drink')
         self.bag.timers.set_timeout(1, self, 'stop_drink')
+
 
 func stop_drink():
     self.animations.play('idle')

@@ -9,7 +9,8 @@ var music_volume = 1.0
 
 var stream
 var samples = [
-    ['jump_normal', preload('res://assets/sounds/sfx/jump_normal.wav')]
+    ['jump_normal', preload('res://assets/sounds/sfx/jump_normal.wav')],
+    ['drink', preload('res://assets/sounds/sfx/drink.wav')],
 ]
 
 func _init_bag(bag):
