@@ -14,9 +14,19 @@ var SEGMENT_LINE_HEIGHT = 36
 var WALL_HEIGHT = 39
 var WALL_HALF_WIDTH = 36
 
-var platforms = [
-    { 'width' : 100, 'template' : preload('res://scenes/map/platform_grass.xscn') }
-]
+var platforms = {
+    'grass' : [
+        { 'width' : 100, 'template' : preload('res://scenes/map/platform_grass_big.xscn') },
+        { 'width' : 100, 'template' : preload('res://scenes/map/platform_grass_medium.xscn') },
+        { 'width' : 100, 'template' : preload('res://scenes/map/platform_grass_small.xscn') }
+    ],
+    'ice' : [
+        { 'width' : 100, 'template' : preload('res://scenes/map/platform_ice_big.xscn') },
+        { 'width' : 100, 'template' : preload('res://scenes/map/platform_ice_medium.xscn') },
+        { 'width' : 100, 'template' : preload('res://scenes/map/platform_ice_small.xscn') }
+    ]
+}
+
 
 var left_wall_template = preload('res://scenes/map/wall_left.xscn')
 var right_wall_template = preload('res://scenes/map/wall_right.xscn')
@@ -42,7 +52,7 @@ func generate_next_map_segment():
 
     new_segment = self.add_walls(new_segment)
     new_segment = self.add_separator(new_segment)
-    new_segment = self.add_platforms(new_segment)
+    new_segment = self.add_platforms(new_segment, next_segment_index)
 
     self.segments.append(new_segment)
     self.apply_segment(next_segment_index)
@@ -110,14 +120,20 @@ func update_segments(player_height):
         self.last_visited_segment = segment_num
         self.generate_next_map_segment()
 
-func add_platforms(segment):
+func add_platforms(segment, index):
     var iterator = 2
     var last_iterator = 0
+
+    var templates
+    if index < 3:
+        templates = self.platforms.grass
+    else:
+        templates = self.platforms.ice
 
     randomize()
 
     while iterator < self.SEGMENT_SIZE - 2:
-        segment = self.generate_single_platform(segment, iterator)
+        segment = self.generate_single_platform(segment, iterator, templates)
 
         last_iterator = iterator
 
@@ -127,12 +143,12 @@ func add_platforms(segment):
             iterator = iterator + 4
 
     if last_iterator < self.SEGMENT_SIZE - 4:
-        segment = self.generate_single_platform(segment, self.SEGMENT_SIZE - 2)
+        segment = self.generate_single_platform(segment, self.SEGMENT_SIZE - 2, templates)
 
     return segment
 
-func generate_single_platform(segment, iterator):
-    var template = self.platforms[randi() % self.platforms.size()]
+func generate_single_platform(segment, iterator, templates):
+    var template = templates[randi() % templates.size()]
     var new_platform = template.template.instance()
 
     var horizontal_position = randi() % (self.playable_width - template.width)
