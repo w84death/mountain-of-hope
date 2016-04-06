@@ -18,6 +18,8 @@ var is_jumping = false
 
 var EXIT_THRESHOLD = 30
 
+var camera
+
 func _init(bag, player_id).(bag):
     self.bag = bag
     self.player_id = player_id
@@ -28,6 +30,7 @@ func _init(bag, player_id).(bag):
     self.avatar = preload("res://scenes/player/player.xscn").instance()
     self.animations = self.avatar.get_node('animations')
     self.body = self.avatar.get_node('body')
+    self.camera = self.avatar.get_node('Camera2D')
 
 
     #self.panel = self.bag.hud.bind_player_panel(player_id)
@@ -210,6 +213,8 @@ func reset():
     self.score = 0
     self.is_attack_on_cooldown = false
     self.top_height = 0
+    self.camera.clear_current()
+    self.despawn()
 
 func attack_cooled_down():
     self.is_attack_on_cooldown = false

@@ -12,7 +12,7 @@ var SEGMENT_SIZE = 60
 var SEGMENT_LINE_HEIGHT = 36
 
 var WALL_HEIGHT = 39
-var WALL_HALF_WIDTH = 20
+var WALL_HALF_WIDTH = 0
 
 var platforms = {
     'grass' : [
@@ -44,6 +44,7 @@ func reset_map():
     for segment in self.segments:
         self.destroy_unused_segment(segment)
     self.segments.clear()
+    self.last_visited_segment = -1
 
 
 func generate_next_map_segment():

@@ -18,6 +18,7 @@ func bind_players():
 func spawn_players():
     for player in self.players:
         player.enter_game()
+    self.players[0].camera.make_current()
 
 func move_to_entry_position(name):
     for player in self.players:

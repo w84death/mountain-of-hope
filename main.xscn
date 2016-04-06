@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="19" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
+<resource_file type="PackedScene" subresource_count="14" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
 	<ext_resource path="res://scenes/map/background.xscn" type="PackedScene" index="9"></ext_resource>
-	<ext_resource path="res://scenes/hud/assets/corner.png" type="Texture" index="14"></ext_resource>
-	<ext_resource path="res://scenes/shaders/vigette.png" type="Texture" index="12"></ext_resource>
+	<ext_resource path="res://scenes/hud/assets/corner.png" type="Texture" index="11"></ext_resource>
 	<ext_resource path="res://scenes/player/assets/die.wav" type="Sample" index="6"></ext_resource>
 	<ext_resource path="res://scripts/main.gd" type="Script" index="0"></ext_resource>
 	<ext_resource path="res://scenes/player/assets/hit.wav" type="Sample" index="7"></ext_resource>
-	<ext_resource path="res://scenes/shaders/snow2.png" type="Texture" index="11"></ext_resource>
 	<ext_resource path="res://scenes/player/assets/attack_right.wav" type="Sample" index="5"></ext_resource>
 	<ext_resource path="res://scenes/player/assets/attack_left.wav" type="Sample" index="4"></ext_resource>
 	<ext_resource path="res://scenes/hud/assets/dos437-16.fnt" type="Font" index="3"></ext_resource>
-	<ext_resource path="res://scenes/shaders/white.png" type="Texture" index="13"></ext_resource>
 	<ext_resource path="res://scenes/hud/assets/logo.png" type="Texture" index="1"></ext_resource>
 	<ext_resource path="res://scenes/hud/assets/goral.png" type="Texture" index="2"></ext_resource>
 	<ext_resource path="res://assets/sounds/polka_final.ogg" type="AudioStream" index="8"></ext_resource>
@@ -24,29 +21,6 @@
 			<string> "sample" </string>
 			<resource  external="6">  </resource>
 		</dictionary>
-		<dictionary name="samples/you_can" shared="false">
-			<string> "db" </string>
-			<real> 0 </real>
-			<string> "pitch" </string>
-			<real> 1 </real>
-			<string> "sample" </string>
-			<resource name=""></resource>		</dictionary>
-		<dictionary name="samples/player_attack2" shared="false">
-			<string> "db" </string>
-			<real> 0 </real>
-			<string> "pitch" </string>
-			<real> 1 </real>
-			<string> "sample" </string>
-			<resource  external="5">  </resource>
-		</dictionary>
-		<dictionary name="samples/player_attack1" shared="false">
-			<string> "db" </string>
-			<real> 0 </real>
-			<string> "pitch" </string>
-			<real> 1 </real>
-			<string> "sample" </string>
-			<resource  external="4">  </resource>
-		</dictionary>
 		<dictionary name="samples/player_hit" shared="false">
 			<string> "db" </string>
 			<real> 0 </real>
@@ -55,6 +29,13 @@
 			<string> "sample" </string>
 			<resource  external="7">  </resource>
 		</dictionary>
+		<dictionary name="samples/you_can" shared="false">
+			<string> "db" </string>
+			<real> 0 </real>
+			<string> "pitch" </string>
+			<real> 1 </real>
+			<string> "sample" </string>
+			<resource name=""></resource>		</dictionary>
 		<dictionary name="samples/game_over" shared="false">
 			<string> "db" </string>
 			<real> 0 </real>
@@ -62,35 +43,22 @@
 			<real> 1 </real>
 			<string> "sample" </string>
 			<resource name=""></resource>		</dictionary>
-
-	</resource>
-	<resource type="CanvasItemShader" path="local://23">
-		<dictionary name="_code" shared="false">
-			<string> "fragment" </string>
-			<string> "uniform color base=color(0.6,0.6,0.6,0.1);&#000a;uniform texture grain;&#000a;uniform float grain_strength=0.8;&#000a;uniform texture vignette;&#000a;uniform float fps=4;&#000a;uniform float stretch = 0.1;&#000a;uniform float flashing=0.01;&#000a;&#000a;vec3 c = texscreen(SCREEN_UV);&#000a;&#000a;//float v = max(c.r,max(c.g,c.b));&#000a;float v = dot(c,vec3(0.60,0.60,0.60));&#000a;v=sqrt(v);&#000a;//v*=v;&#000a;float make_grain(float time) {&#000a;&#000a;&#0009;//vec2 ofs = vec2( sin(4 * time * sin(time*100)) , -abs(sin(2*time*sin(time*300))) );&#000a;&#0009;vec2 ofs = vec2( sin(4 * time * sin(time*100)) , -0.1);&#000a;&#0009;return tex(grain,(UV + ofs) * stretch).r;&#000a;}&#000a;&#000a;float f = 1.0/fps;&#000a;float g = make_grain(TIME-mod(TIME,f));&#000a;g=max(g,make_grain(TIME-mod(TIME,f)+f)*0.5);&#000a;g=max(g,make_grain(TIME-mod(TIME,f)+f*2.0)*0.25);&#000a;&#000a;&#000a;COLOR.rgb= c.rgb + vec3(g)*grain_strength;&#000a;COLOR.rgb*= tex(vignette,UV).r;&#000a;float ft = TIME * 0.002;&#000a;//COLOR.rgb+=vec3(sin(75*ft*sin(ft*123)))*flashing;&#000a;" </string>
-			<string> "fragment_ofs" </string>
-			<int> 0 </int>
-			<string> "light" </string>
-			<string> "" </string>
-			<string> "light_ofs" </string>
-			<int> 0 </int>
-			<string> "vertex" </string>
-			<string> "" </string>
-			<string> "vertex_ofs" </string>
-			<int> 0 </int>
+		<dictionary name="samples/player_attack1" shared="false">
+			<string> "db" </string>
+			<real> 0 </real>
+			<string> "pitch" </string>
+			<real> 1 </real>
+			<string> "sample" </string>
+			<resource  external="4">  </resource>
 		</dictionary>
-
-	</resource>
-	<resource type="CanvasItemMaterial" path="local://24">
-		<resource name="shader/shader" resource_type="Shader" path="local://23">  </resource>
-		<int name="shader/shading_mode"> 0 </int>
-		<color name="shader_param/base"> 0.39048, 0.435342, 0.405715, 1 </color>
-		<resource name="shader_param/grain" external="11">  </resource>
-		<real name="shader_param/grain_strength"> 0.15 </real>
-		<resource name="shader_param/vignette" external="12">  </resource>
-		<real name="shader_param/fps"> 12 </real>
-		<real name="shader_param/stretch"> 0.5 </real>
-		<real name="shader_param/flashing"> 0.01 </real>
+		<dictionary name="samples/player_attack2" shared="false">
+			<string> "db" </string>
+			<real> 0 </real>
+			<string> "pitch" </string>
+			<real> 1 </real>
+			<string> "sample" </string>
+			<resource  external="5">  </resource>
+		</dictionary>
 
 	</resource>
 	<main_resource>
@@ -100,7 +68,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="91">
+			<string_array  len="87">
 				<string> "root" </string>
 				<string> "Control" </string>
 				<string> "margin/right" </string>
@@ -178,10 +146,6 @@
 				<string> "_import_path" </string>
 				<string> "hud" </string>
 				<string> "visibility/visible" </string>
-				<string> "shader" </string>
-				<string> "TextureFrame" </string>
-				<string> "material/material" </string>
-				<string> "expand" </string>
 				<string> "corner" </string>
 				<string> "anchor/left" </string>
 				<string> "centered" </string>
@@ -194,13 +158,13 @@
 				<string> "corner3" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 22 </int>
+			<int> 21 </int>
 			<string> "nodes" </string>
-			<int_array  len="470"> 				-1, -1, 1, 0, -1, 8, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 4, 8, 5, 9, 6, 0, 0, 0, 11, 10, -1, 9, 12, 7, 13, 7, 14, 8, 2, 9, 4, 2, 5, 3, 6, 4, 7, 4, 15, 2, 0, 1, 0, 1, 16, -1, 8, 14, 10, 17, 11, 2, 10, 3, 11, 4, 2, 5, 3, 6, 4, 7, 4, 0, 2, 0, 18, 10, -1, 3, 19, 12, 20, 13, 21, 14, 0, 2, 0, 18, 22, -1, 3, 19, 15, 20, 13, 21, 16, 0, 2, 0, 24, 23, -1, 13, 14, 17, 17, 18, 2, 19, 3, 20, 4, 3, 5, 3, 6, 4, 25, 21, 26, 22, 27, 7, 28, 23, 29, 24, 30, 25, 0, 2, 0, 18, 31, -1, 4, 19, 26, 20, 13, 21, 16, 32, 3, 0, 0, 0, 33, 33, -1, 14, 34, 7, 35, 27, 36, 28, 37, 23, 38, 28, 39, 28, 40, 28, 41, 24, 42, 28, 43, 28, 44, 28, 45, 4, 46, 28, 47, 28, 0, 0, 0, 48, 48, -1, 8, 49, 29, 50, 3, 51, 3, 52, 28, 53, 3, 54, 2, 55, 28, 56, 30, 0, 0, 0, 57, 57, -1, 14, 58, 31, 59, 2, 60, 32, 61, 2, 62, 2, 63, 2, 64, 3, 65, 2, 66, 2, 67, 4, 68, 2, 69, 2, 70, 2, 9, 33, 0, 9, 0, 1, 71, -1, 6, 2, 34, 3, 34, 4, 2, 5, 3, 6, 4, 7, 4, 0, 0, 0, 73, 72, 35, 2, 74, 36, 9, 37, 0, 0, 0, 1, 75, 38, 3, 74, 36, 76, 2, 9, 39, 0, 0, 0, 78, 77, -1, 9, 79, 40, 12, 7, 13, 7, 4, 3, 5, 3, 6, 4, 7, 4, 21, 41, 80, 3, 0, 0, 0, 1, 81, -1, 7, 82, 7, 12, 7, 4, 2, 5, 3, 6, 4, 7, 4, 9, 42, 0, 14, 0, 18, 18, -1, 7, 19, 43, 20, 13, 21, 44, 83, 2, 84, 4, 85, 4, 86, 7, 0, 0, 0, 1, 87, -1, 5, 4, 2, 5, 3, 6, 4, 7, 4, 9, 45, 0, 16, 0, 18, 18, -1, 5, 20, 13, 21, 44, 83, 2, 84, 4, 85, 4, 0, 0, 0, 1, 88, -1, 7, 89, 7, 13, 7, 4, 2, 5, 3, 6, 4, 7, 4, 9, 46, 0, 18, 0, 18, 18, -1, 7, 19, 47, 20, 13, 21, 44, 83, 2, 84, 4, 85, 4, 86, 4, 0, 0, 0, 1, 90, -1, 9, 82, 7, 89, 7, 12, 7, 13, 7, 4, 2, 5, 3, 6, 4, 7, 4, 9, 48, 0, 20, 0, 18, 18, -1, 7, 19, 49, 20, 13, 21, 44, 83, 2, 84, 4, 85, 4, 86, 50, 0 </int_array>
+			<int_array  len="445"> 				-1, -1, 1, 0, -1, 8, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 4, 8, 5, 9, 6, 0, 0, 0, 11, 10, -1, 9, 12, 7, 13, 7, 14, 8, 3, 8, 4, 2, 5, 3, 6, 4, 7, 4, 15, 2, 0, 1, 0, 1, 16, -1, 8, 14, 9, 17, 10, 2, 9, 3, 10, 4, 2, 5, 3, 6, 4, 7, 4, 0, 2, 0, 18, 10, -1, 3, 19, 11, 20, 12, 21, 13, 0, 2, 0, 18, 22, -1, 3, 19, 14, 20, 12, 21, 15, 0, 2, 0, 24, 23, -1, 13, 14, 16, 17, 17, 2, 18, 3, 19, 4, 3, 5, 3, 6, 4, 25, 20, 26, 21, 27, 7, 28, 22, 29, 23, 30, 24, 0, 2, 0, 18, 31, -1, 4, 19, 25, 20, 12, 21, 15, 32, 3, 0, 0, 0, 33, 33, -1, 14, 34, 7, 35, 26, 36, 27, 37, 22, 38, 27, 39, 27, 40, 27, 41, 23, 42, 27, 43, 27, 44, 27, 45, 4, 46, 27, 47, 27, 0, 0, 0, 48, 48, -1, 8, 49, 28, 50, 3, 51, 3, 52, 27, 53, 3, 54, 2, 55, 27, 56, 29, 0, 0, 0, 57, 57, -1, 14, 58, 30, 59, 2, 60, 31, 61, 2, 62, 2, 63, 2, 64, 3, 65, 2, 66, 2, 67, 4, 68, 2, 69, 2, 70, 2, 9, 32, 0, 9, 0, 1, 71, -1, 6, 2, 33, 3, 33, 4, 2, 5, 3, 6, 4, 7, 4, 0, 0, 0, 73, 72, 34, 2, 74, 35, 9, 36, 0, 0, 0, 1, 75, 37, 3, 74, 35, 76, 2, 9, 38, 0, 0, 0, 1, 77, -1, 7, 78, 7, 12, 7, 4, 2, 5, 3, 6, 4, 7, 4, 9, 39, 0, 13, 0, 18, 18, -1, 7, 19, 40, 20, 12, 21, 41, 79, 2, 80, 4, 81, 4, 82, 7, 0, 0, 0, 1, 83, -1, 5, 4, 2, 5, 3, 6, 4, 7, 4, 9, 42, 0, 15, 0, 18, 18, -1, 5, 20, 12, 21, 41, 79, 2, 80, 4, 81, 4, 0, 0, 0, 1, 84, -1, 7, 85, 7, 13, 7, 4, 2, 5, 3, 6, 4, 7, 4, 9, 43, 0, 17, 0, 18, 18, -1, 7, 19, 44, 20, 12, 21, 41, 79, 2, 80, 4, 81, 4, 82, 4, 0, 0, 0, 1, 86, -1, 9, 78, 7, 85, 7, 12, 7, 13, 7, 4, 2, 5, 3, 6, 4, 7, 4, 9, 45, 0, 19, 0, 18, 18, -1, 7, 19, 46, 20, 12, 21, 41, 79, 2, 80, 4, 81, 4, 82, 47, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="51" shared="false">
-				<real> 1280 </real>
-				<real> 720 </real>
+			<array  len="48" shared="false">
+				<real> 1680 </real>
+				<real> 1054 </real>
 				<bool> False </bool>
 				<bool> True </bool>
 				<int> 2 </int>
@@ -343,9 +307,8 @@
 				</dictionary>
 				<int> 1 </int>
 				<real> 3 </real>
-				<real> -3 </real>
-				<real> 640 </real>
-				<real> 360 </real>
+				<real> 838 </real>
+				<real> 525 </real>
 				<vector2> 0, -50 </vector2>
 				<vector2> 2, 2 </vector2>
 				<resource  external="1">  </resource>
@@ -365,7 +328,7 @@
 				<real> 0 </real>
 				<resource  external="8">  </resource>
 				<int> 500 </int>
-				<rect2> 0, 0, 1280, 720 </rect2>
+				<rect2> 0, 0, 1680, 1054 </rect2>
 				<resource name=""></resource>				<dictionary  shared="false">
 					<string> "_editor_collapsed" </string>
 					<bool> True </bool>
@@ -646,14 +609,12 @@
 						<int> 0 </int>
 					</dictionary>
 				</dictionary>
-				<resource  resource_type="CanvasItemMaterial" path="local://24">  </resource>
-				<resource  external="13">  </resource>
 				<dictionary  shared="false">
 					<string> "_editor_collapsed" </string>
 					<bool> True </bool>
 				</dictionary>
 				<vector2> -128, 0 </vector2>
-				<resource  external="14">  </resource>
+				<resource  external="11">  </resource>
 				<dictionary  shared="false">
 					<string> "_editor_collapsed" </string>
 					<bool> True </bool>

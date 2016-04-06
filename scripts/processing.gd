@@ -16,6 +16,8 @@ func register(object):
     self.bag.root.add_child(wrapper)
 
 func remove(object):
+    if not self.objects.has(object.get_instance_ID()):
+        return
     var wrapper = self.objects[object.get_instance_ID()]
     wrapper.kill()
     self.bag.root.remove_child(wrapper)

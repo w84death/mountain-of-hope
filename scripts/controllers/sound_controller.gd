@@ -4,7 +4,7 @@ var stream_player
 var sample_player
 var bag
 
-var sound_volume = 1.0
+var sound_volume = 0.5
 var music_volume = 1.0
 
 var stream

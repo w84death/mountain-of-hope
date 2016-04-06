@@ -9,7 +9,7 @@ func _init(bag, player, axis, key, direction):
     self.player = player
     self.axis = axis
     self.direction = direction
-    self.type = InputEvent.JOYSTICK_MOTION
+    self.type = InputEvent.JOYSTICK_BUTTON
     self.button_index = key
 
 func handle(event):

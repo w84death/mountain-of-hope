@@ -38,7 +38,7 @@ func _init(root_node):
 func reset():
     self.players.reset()
     self.game_state.reset()
-    self.hud.reset()
+    #self.hud.reset()
     self.enemies.reset()
     self.items.reset()
     self.processing.reset()
