@@ -21,3 +21,4 @@ func load_basic_input():
     self.devices['keyboard'].register_handler(preload("res://scripts/input/handlers/start_game_key.gd").new(self.bag))
     self.devices['arcade'].register_handler(preload("res://scripts/input/handlers/start_game_arcade.gd").new(self.bag))
     self.devices['arcade'].register_handler(preload("res://scripts/input/handlers/end_game_arcade.gd").new(self.bag))
+    self.devices['arcade'].register_handler(preload("res://scripts/input/handlers/quit_game_arcade.gd").new(self.bag))
