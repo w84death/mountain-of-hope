@@ -21,12 +21,10 @@ func handle(event):
             self.state = 3
         elif self.state == 3 && event.button_index == 3:
             self.state = 4
-        elif self.state == 4 && event.button_index == 21:
-            self.state = 5
         else:
             self.state = 0
 
-        if self.state == 5:
+        if self.state == 4:
             OS.get_main_loop().quit()
 
 
